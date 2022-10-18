@@ -45,6 +45,12 @@ export function Header () {
                                     </span>
                                     Suporte
                                 </li>
+                                <li className="cursor-pointer h-full flex items-center text-lg hover:text-gray-700 text-gray-800 tracking-normal transition duration-150 ease-in-out">
+                                    <span className="mr-2">
+                                      
+                                    </span>
+                                    Sair 
+                                </li>
                             </ul>
                         </div>
                         <div className="h-full hidden xl:flex items-center justify-end">
