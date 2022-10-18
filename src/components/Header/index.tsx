@@ -45,12 +45,7 @@ export function Header () {
                                     </span>
                                     Suporte
                                 </li>
-                                <li className="cursor-pointer h-full flex items-center text-lg hover:text-gray-700 text-gray-800 tracking-normal transition duration-150 ease-in-out">
-                                    <span className="mr-2">
-                                      
-                                    </span>
-                                    Sair 
-                                </li>
+                               
                             </ul>
                         </div>
                         <div className="h-full hidden xl:flex items-center justify-end">
@@ -75,6 +70,10 @@ export function Header () {
                                              
                                                 <span className="ml-2">Suporte</span>
                                             </li>
+                                            <li className="cursor-pointer text-gray-200 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+                                             
+                                             <span className="ml-2">Sair</span>
+                                         </li>
                                         </ul>
                                     )}
                                      <ButtonLogin />
