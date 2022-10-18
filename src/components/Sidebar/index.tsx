@@ -1,4 +1,4 @@
-import { Lessong } from "../Lessong";
+
 
 
 export function Sidebar () {
@@ -9,7 +9,7 @@ export function Sidebar () {
                 Cronogramas de Estudo    
     </span>
 
-        <Lessong/>
+       
     </div>
     
 </div>
