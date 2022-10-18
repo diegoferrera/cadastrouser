@@ -64,7 +64,7 @@ return (
                                 {" "}
                                 Email{" "}
                             </label>
-                            <input id="email" aria-labelledby="email" type="email" className="bg-gray-200 border rounded text-xs font-medium leading-none placeholder-gray-700 text-gray-700 py-3 w-full pl-3 mt-2" placeholder="e.g: nome@gmail.com " />
+                            <input id="email" aria-labelledby="email" type="email" className="bg-gray-200 border rounded text-xs font-medium leading-none placeholder-gray-700 text-gray-700 py-3 w-full pl-3 mt-2" placeholder="nome@gmail.com " />
                         </div>
                         <div className="mt-6 w-full">
                             <label htmlFor="myInput" className="text-sm font-medium leading-none text-gray-700">
