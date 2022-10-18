@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ButtonLogin } from "../ButtonLogin";
 import { Logo } from "./Logo";
+import Link from "next/link";
 
 
 
@@ -14,25 +15,31 @@ export function Header () {
                     <div className="container px-6 h-16 flex justify-between items-center lg:items-stretch mx-auto">
                         <div className="flex items-center">
                             <div className="mr-10 flex items-center">
-                                <h3 className="text-base text-gray-800 font-bold tracking-normal leading-tight ml-3 hidden lg:block"><Logo/></h3>
-                            </div>
+                                <div><Logo/></div>
+                               </div>
                             <ul className="hidden xl:flex items-center h-full">
-                                <li className="cursor-pointer h-full flex items-center text-sm text-indigo-700 tracking-normal transition duration-150 ease-in-out">
-                                    Home
+                            <Link href="/dashboard" passHref>
+                                <li className="cursor-pointer h-full flex items-center text-lg hover:text-gray-700 tracking-normal transition duration-150 ease-in-out">
+                                Home                                
                                 </li>
-                                <li className="cursor-pointer h-full flex items-center text-sm hover:text-indigo-700 text-gray-800 mx-10 tracking-normal transition duration-150 ease-in-out">
+                                </Link>
+                                <Link href="/agenda" passHref>
+                                <li className="cursor-pointer h-full flex items-center text-lg hover:text-gray-700 text-gray-800 mx-10 tracking-normal transition duration-150 ease-in-out">
                                     <span className="mr-2">
                                    
                                     </span>
                                    Agenda
                                 </li>
-                                <li className="cursor-pointer h-full flex items-center text-sm hover:text-indigo-700 text-gray-800 mr-10 tracking-normal transition duration-150 ease-in-out">
+                                </Link>
+                                <Link href="/pacientes" passHref>
+                                <li className="cursor-pointer h-full flex items-center text-lg hover:text-gray-700 text-gray-800 mr-10 tracking-normal transition duration-150 ease-in-out">
                                     <span className="mr-2">
                                     
                                     </span>
                                     Pacientes
                                 </li>
-                                <li className="cursor-pointer h-full flex items-center text-sm hover:text-indigo-700 text-gray-800 tracking-normal transition duration-150 ease-in-out">
+                                </Link>
+                                <li className="cursor-pointer h-full flex items-center text-lg hover:text-gray-700 text-gray-800 tracking-normal transition duration-150 ease-in-out">
                                     <span className="mr-2">
                                       
                                     </span>
@@ -47,7 +54,7 @@ export function Header () {
                                
                                 <div className="flex items-center pl-8 relative cursor-pointer" onClick={() => setProfile(!profile)}>
                                     {profile && (
-                                        <ul className="w-40 border-r border-x-green-300 py-4 bg-gray-700 absolute rounded left-0 shadow mt-16 top-0 ">
+                                        <ul className="w-40 border-l border-x-purple-700 py-4 bg-green-300 absolute rounded left-0 shadow mt-16 top-0 ">
                                             <li className="cursor-pointer text-gray-200 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
                                                 <div className="flex items-center">
                                                   
@@ -73,23 +80,25 @@ export function Header () {
                                 <li className="flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
                                     <div className="flex items-center">
                                        
-                                        <span className="ml-2 font-bold">Agenda</span>
+                                        <span className="ml-2 font-bold">Home</span>
                                     </div>
                                 </li>
                                 <li className="md:hidden flex-col cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex justify-center" >
                                     <div className="flex items-center">
                                        
-                                        <span className="ml-2 font-bold">Pacientes</span>
+                                    <Link href="/agenda" passHref>
+                                        <span className="ml-2 font-bold">Agenda</span>
+                                        </Link>
                                     </div>
                                 </li>
-                                <li className="md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+                                <li className="flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
                                   
-                                    <span className="ml-2 font-bold">Performance</span>
+                                    <span className="ml-2 font-bold">Pacientes</span>
                                 </li>
                                 <li className="border-b border-gray-300 flex md:hidden flex-col cursor-pointer text-gray-600 text-sm leading-3 tracking-normal pt-2 pb-4 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none justify-center">
                                     <div className="flex items-center">
                                        
-                                        <span className="ml-2 font-bold">Deliverables</span>
+                                        <span className="ml-2 font-bold">Suporte</span>
                                     </div>
                                 </li>
                                 <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
@@ -97,7 +106,7 @@ export function Header () {
                                         <div className="w-12 cursor-pointer flex text-sm border-2 border-transparent rounded focus:outline-none focus:border-white transition duration-150 ease-in-out">
                                             
                                         </div>
-                                        <p className="text-sm ml-2 cursor-pointer">Jane Doe</p>
+                                        <p className="text-sm ml-2 cursor-pointer">Socorro Coêlho</p>
                                         <div className="sm:ml-2 text-gray-800 relative">
                                           
                                         </div>
@@ -106,7 +115,7 @@ export function Header () {
                                 <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
                                     <div className="flex items-center">
 
-                                        <span className="ml-2">Profile</span>
+                                        <span className="ml-2">Perfil</span>
                                     </div>
                                 </li>
                             </ul>
@@ -137,7 +146,7 @@ export function Header () {
                     {/*Mobile responsive sidebar*/}
                     <div className={show ? "absolute xl:hidden w-full h-full transform -translate-x-0 z-40" : "absolute xl:hidden w-full h-full transform -translate-x-full z-40"} id="mobile-nav">
                         <div className="bg-gray-800 opacity-50 w-full h-full" onClick={() => setShow(!show)} />
-                        <div className="w-64 z-40 fixed overflow-y-auto top-0 bg-white shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out bg-gray-700">
+                        <div className="w-64 z-40 fixed overflow-y-auto z-40 top-0 bg-white shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out bg-gray-700">
                             <div className="px-6 h-full">
                                 <div className="flex flex-col justify-between h-full w-full">
                                     <div>
@@ -231,6 +240,7 @@ export function Header () {
                                         <div className="border-t border-gray-300">
                                             <div className="w-full flex items-center justify-between pt-1">
                                                 <div className="flex items-center">
+                                                    <img alt="profile-pic" src="https://tuk-cdn.s3.amazonaws.com/assets/components/boxed_layout/bl_1.png" className="w-8 h-8 rounded-md" />
                                                     <p className=" text-gray-800 text-base leading-4 ml-2">Socorro</p>
                                                 </div>
                                                 <ul className="flex">
