@@ -225,7 +225,7 @@ export default function Sidebar () {
             </div>
             {/* Sidebar ends */}
             {/* Remove class [ h-64 ] when adding a card block */}
-            <div className="container mx-auto py-10 h-64 md:w-4/5 w-11/12 px-6">
+            <div className="container mx-auto py-10 md:w-4/5 w-11/12 px-6">
                 {/* Remove class [ border-dashed border-2 border-gray-300 ] to remove dotted border */}
                 <div className="w-full h-full rounded">
                 <div className="w-full sm:px-0">
@@ -269,17 +269,17 @@ export default function Sidebar () {
                                     <p className="font-medium text-base">28/11/1993</p>
                                    
                                 </td>
-                                <td className="pl-20">
+                                <td className="pl-12">
                                     <p className="font-medium text-base">4</p>
                              
                                 </td>
-                                <td className="pl-20">
+                                <td className="pl-12">
                                 <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-green-300 hover:bg-indigo-600 focus:outline-none rounded">
                                 <p className="text-sm font-medium leading-none text-gray-100">Iniciar Consulta</p>
                             </button>
                                 </td>
                               
-                                <td className="pl-20">
+                                <td className="pl-12">
                                 <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-purple-700 hover:bg-indigo-600 focus:outline-none rounded">
                                 <p className="text-sm font-medium leading-none text-gray-100">Deletar</p>
                             </button>
@@ -305,17 +305,17 @@ export default function Sidebar () {
                                     <p className="font-medium text-base">22/09/1994</p>
                                    
                                 </td>
-                                <td className="pl-20">
+                                <td className="pl-12">
                                     <p className="font-medium text-base">2</p>
                              
                                 </td>
-                                <td className="pl-20">
+                                <td className="pl-12">
                                 <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-green-300 hover:bg-indigo-600 focus:outline-none rounded">
                                 <p className="text-sm font-medium leading-none text-gray-100">Iniciar Consulta</p>
                             </button>
                                 </td>
                               
-                                <td className="pl-20">
+                                <td className="pl-12">
                                 <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-purple-700 hover:bg-indigo-600 focus:outline-none rounded">
                                 <p className="text-sm font-medium leading-none text-gray-100">Deletar</p>
                             </button>
@@ -341,17 +341,17 @@ export default function Sidebar () {
                                     <p className="font-medium text-base">15/12/1984</p>
                                    
                                 </td>
-                                <td className="pl-20">
+                                <td className="pl-12">
                                     <p className="font-medium text-base">2</p>
                              
                                 </td>
-                                <td className="pl-20">
+                                <td className="pl-12">
                                 <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-green-300 hover:bg-indigo-600 focus:outline-none rounded">
                                 <p className="text-sm font-medium leading-none text-gray-100">Iniciar Consulta</p>
                             </button>
                                 </td>
                               
-                                <td className="pl-20">
+                                <td className="pl-12">
                                 <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-purple-700 hover:bg-indigo-600 focus:outline-none rounded">
                                 <p className="text-sm font-medium leading-none text-gray-100">Deletar</p>
                             </button>
