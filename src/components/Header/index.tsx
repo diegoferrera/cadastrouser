@@ -240,7 +240,7 @@ export function Header () {
                                         <div className="border-t border-gray-300">
                                             <div className="w-full flex items-center justify-between pt-1">
                                                 <div className="flex items-center">
-                                                    <img alt="profile-pic" src="https://tuk-cdn.s3.amazonaws.com/assets/components/boxed_layout/bl_1.png" className="w-8 h-8 rounded-md" />
+                                                    
                                                     <p className=" text-gray-800 text-base leading-4 ml-2">Socorro</p>
                                                 </div>
                                                 <ul className="flex">
