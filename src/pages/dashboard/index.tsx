@@ -133,8 +133,8 @@ export default function Dashboard() {
                                     <div className="flex items-center">
                                         
                                         <div className="pl-0">
-                                            <p className="font-medium text-base">Fernanda Teresina Brito</p>
-                                            <p className="text-xs leading-3 text-gray-600 pt-2">86 99836-7648</p>
+                                            <p className="font-medium text-base">Fernando oliveira Brito</p>
+                                            <p className="text-xs leading-3 text-gray-600 pt-2">86 9887-2648</p>
                                         </div>
                                     </div>
                                 </td>
@@ -145,7 +145,7 @@ export default function Dashboard() {
                                     </div>
                                 </td>
                                 <td className="pl-12">
-                                    <p className="font-medium text-base">22/12/1994</p>
+                                    <p className="font-medium text-base">10/09/1992</p>
                                    
                                 </td>
                                 <td className="pl-20">
