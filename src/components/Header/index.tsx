@@ -137,7 +137,7 @@ export function Header () {
                     {/*Mobile responsive sidebar*/}
                     <div className={show ? "absolute xl:hidden w-full h-full transform -translate-x-0 z-40" : "absolute xl:hidden w-full h-full transform -translate-x-full z-40"} id="mobile-nav">
                         <div className="bg-gray-800 opacity-50 w-full h-full" onClick={() => setShow(!show)} />
-                        <div className="w-64 z-40 fixed overflow-y-auto z-40 top-0 bg-white shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out bg-gray-700">
+                        <div className="w-64 z-40 fixed overflow-y-auto top-0 bg-white shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out bg-gray-700">
                             <div className="px-6 h-full">
                                 <div className="flex flex-col justify-between h-full w-full">
                                     <div>
@@ -231,7 +231,6 @@ export function Header () {
                                         <div className="border-t border-gray-300">
                                             <div className="w-full flex items-center justify-between pt-1">
                                                 <div className="flex items-center">
-                                                    <img alt="profile-pic" src="https://tuk-cdn.s3.amazonaws.com/assets/components/boxed_layout/bl_1.png" className="w-8 h-8 rounded-md" />
                                                     <p className=" text-gray-800 text-base leading-4 ml-2">Socorro</p>
                                                 </div>
                                                 <ul className="flex">
