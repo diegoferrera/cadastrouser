@@ -304,7 +304,7 @@ export default function Sidebar () {
                                     </div>
                                 </td>
                                 <td className="pl-12">
-                                    <p className="font-medium text-base">22/13/1994</p>
+                                    <p className="font-medium text-base">22/09/1994</p>
                                    
                                 </td>
                                 <td className="pl-20">
@@ -323,7 +323,42 @@ export default function Sidebar () {
                             </button>
                                 </td>
                             </tr>
-                           
+                            <tr className="h-20 text-sm leading-none text-gray-700 bg-gray-100 hover:bg-gray-200 border-b border-t border-gray-300">
+                                <td className="pl-4 cursor-pointer">
+                                    <div className="flex items-center">
+                                        
+                                        <div className="pl-0">
+                                            <p className="font-medium text-base">Bruna ferreira andrade</p>
+                                            <p className="text-xs leading-3 text-gray-600 pt-2">86 98846-7949</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td className="pl-12">
+                                    <p className="text-base font-medium leading-none text-gray-800">Feminino</p>
+                                    <div className="w-24 h-3 bg-gray-100 rounded-full mt-2">
+                                        <div className="w-20 h-3 bg-green-progress rounded-full" />
+                                    </div>
+                                </td>
+                                <td className="pl-12">
+                                    <p className="font-medium text-base">15/12/1984</p>
+                                   
+                                </td>
+                                <td className="pl-20">
+                                    <p className="font-medium text-base">2</p>
+                             
+                                </td>
+                                <td className="pl-20">
+                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-green-300 hover:bg-indigo-600 focus:outline-none rounded">
+                                <p className="text-sm font-medium leading-none text-gray-100">Iniciar Consulta</p>
+                            </button>
+                                </td>
+                              
+                                <td className="pl-20">
+                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-purple-700 hover:bg-indigo-600 focus:outline-none rounded">
+                                <p className="text-sm font-medium leading-none text-gray-100">Deletar</p>
+                            </button>
+                                </td>
+                            </tr>
   
                         </tbody>
                     </table>
