@@ -40,9 +40,7 @@ export function Header () {
                                 </li>
                                 </Link>
                                 <li className="cursor-pointer h-full flex items-center text-lg hover:text-gray-700 text-gray-800 tracking-normal transition duration-150 ease-in-out">
-                                    <span className="mr-2">
-                                      
-                                    </span>
+                                  
                                     Suporte
                                 </li>
                                

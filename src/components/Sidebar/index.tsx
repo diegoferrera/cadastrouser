@@ -2,14 +2,15 @@
 export default function Sidebar () {
   return (
   <>
-    <div className="flex flex-no-wrap">
-            {/* Sidebar starts */}
+{/* Sidebar starts */}
             {/* Remove class [ hidden ] and replace [ sm:flex ] with [ flex ] */}
             <div className="w-64 absolute sm:relative bg-gray-300 shadow md:h-full flex-col justify-between hidden sm:flex">
                 <div className="px-8">
-                    
+                    <div className="h-16 w-full flex items-center">
+                       <p className="text-2xl text-gray-400 font-medium">Cadastros</p>
+                    </div>
                     <ul className="mt-12">
-                        <li className="flex w-full justify-between text-gray-500 hover:text-green-500 cursor-pointer items-center mb-6">
+                    <li className="flex w-full justify-between text-gray-500 hover:text-green-500 cursor-pointer items-center mb-6">
                             <div className="flex items-center">
                               
                                 <span className="text-lg font-medium ml-2">Alimentos</span>
@@ -48,29 +49,29 @@ export default function Sidebar () {
                                 <span className="text-lg font-medium  ml-2">Medidas</span>
                             </div>
                         </li>
-                       
                     </ul>
                     <div className="flex justify-center mt-48 mb-4 w-full">
-                       
+                        <div className="relative ">
+                            <div className="text-gray-100 absolute ml-4 inset-0 m-auto w-4 h-4">
+                               
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
                 <div className="px-8 border-t border-gray-700">
                     <ul className="w-full flex items-center justify-between bg-gray-800">
                         <li className="cursor-pointer text-white pt-5 pb-3">
-                            
-                        </li>
-                        <li className="cursor-pointer text-white pt-5 pb-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-messages" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" />
-                                <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
-                                <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
-                            </svg>
+                           
                         </li>
                         <li className="cursor-pointer text-white pt-5 pb-3">
                             
                         </li>
                         <li className="cursor-pointer text-white pt-5 pb-3">
-                          
+                            
+                        </li>
+                        <li className="cursor-pointer text-white pt-5 pb-3">
+                           
                         </li>
                     </ul>
                 </div>
@@ -102,34 +103,21 @@ export default function Sidebar () {
                     <ul className="mt-12">
                         <li className="flex w-full justify-between text-gray-300 hover:text-gray-500 cursor-pointer items-center mb-6">
                             <div className="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-grid" width={18} height={18} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" />
-                                    <rect x={4} y={4} width={6} height={6} rx={1} />
-                                    <rect x={14} y={4} width={6} height={6} rx={1} />
-                                    <rect x={4} y={14} width={6} height={6} rx={1} />
-                                    <rect x={14} y={14} width={6} height={6} rx={1} />
-                                </svg>
-                                <span className="text-sm  ml-2">Dashboard</span>
+                                
+                                <span className="text-sm ml-2">Dashboard</span>
                             </div>
                             <div className="py-1 px-3 bg-gray-700 rounded text-gray-500 flex items-center justify-center text-xs">5</div>
                         </li>
                         <li className="flex w-full justify-between text-gray-600 hover:text-gray-500 cursor-pointer items-center mb-6">
                             <div className="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-puzzle" width={18} height={18} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" />
-                                    <path d="M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1" />
-                                </svg>
+                                
                                 <span className="text-sm  ml-2">Products</span>
                             </div>
                             <div className="py-1 px-3 bg-gray-700 rounded text-gray-500 flex items-center justify-center text-xs">8</div>
                         </li>
                         <li className="flex w-full justify-between text-gray-600 hover:text-gray-500 cursor-pointer items-center mb-6">
                             <div className="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-compass" width={18} height={18} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" />
-                                    <polyline points="8 16 10 10 16 8 14 14 8 16" />
-                                    <circle cx={12} cy={12} r={9} />
-                                </svg>
+                                
                                 <span className="text-sm  ml-2">Performance</span>
                             </div>
                         </li>
@@ -146,10 +134,7 @@ export default function Sidebar () {
                         </li>
                         <li className="flex w-full justify-between text-gray-600 hover:text-gray-500 cursor-pointer items-center mb-6">
                             <div className="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-puzzle" width={18} height={18} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" />
-                                    <path d="M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1" />
-                                </svg>
+                                
                                 <span className="text-sm  ml-2">Invoices</span>
                             </div>
                             <div className="py-1 px-3 bg-gray-700 rounded text-gray-500 flex items-center justify-center text-xs">25</div>
@@ -224,148 +209,6 @@ export default function Sidebar () {
                 </div>
             </div>
             {/* Sidebar ends */}
-            {/* Remove class [ h-64 ] when adding a card block */}
-            <div className="container mx-auto py-10 md:w-4/5 w-11/12 px-6">
-                {/* Remove class [ border-dashed border-2 border-gray-300 ] to remove dotted border */}
-                <div className="w-full h-full rounded">
-                <div className="w-full sm:px-0">
-                <div className="px-4 md:px-10 py-4 md:py-7 bg-gray-300 rounded-tl-lg rounded-tr-lg">
-                    <div className="sm:flex items-center justify-between">
-                        <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold leading-normal text-gray-700">Pacientes</p>
-                        <div>
-                        
-                        </div>
-                    </div>
-                </div>
-                <div className="bg-white shadow px-4 md:px-10 pt-4 md:pt-7 pb-5 overflow-y-auto">
-                    <table className="w-full whitespace-nowrap">
-                        <thead>
-                            <tr className="h-16 w-full text-lg leading-none text-gray-700">
-                                <th className="font-normal text-left pl-4">Nome</th>
-                                <th className="font-normal text-left pl-12">Sexo</th>
-                                <th className="font-normal text-left pl-12">Nascimento</th>
-                                <th className="font-normal text-left pl-20">Consultas</th>
-                                
-                            </tr>
-                        </thead>
-                        <tbody className="w-full">
-                            <tr className="h-20 text-sm leading-none text-gray-700 bg-gray-100 hover:bg-gray-200 border-b border-t border-gray-300">
-                                <td className="pl-4 cursor-pointer">
-                                    <div className="flex items-center">
-                                        
-                                        <div className="pl-0">
-                                            <p className="font-medium text-base">Diego ferreira Batista</p>
-                                            <p className="text-xs leading-3 text-gray-600 pt-2">86 998263658</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td className="pl-12">
-                                    <p className="text-base font-medium leading-none text-gray-800">Masculino</p>
-                                    <div className="w-24 h-3 bg-gray-100 rounded-full mt-2">
-                                        <div className="w-20 h-3 bg-green-progress rounded-full" />
-                                    </div>
-                                </td>
-                                <td className="pl-12">
-                                    <p className="font-medium text-base">28/11/1993</p>
-                                   
-                                </td>
-                                <td className="pl-12">
-                                    <p className="font-medium text-base">4</p>
-                             
-                                </td>
-                                <td className="pl-12">
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-green-300 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100">Iniciar Consulta</p>
-                            </button>
-                                </td>
-                              
-                                <td className="pl-12">
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-purple-700 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100">Deletar</p>
-                            </button>
-                                </td>
-                            </tr>
-                            <tr className="h-20 text-sm leading-none text-gray-700 bg-gray-100 hover:bg-gray-200 border-b border-t border-gray-300">
-                                <td className="pl-4 cursor-pointer">
-                                    <div className="flex items-center">
-                                        
-                                        <div className="pl-0">
-                                            <p className="font-medium text-base">Fernanda Teresina Brito</p>
-                                            <p className="text-xs leading-3 text-gray-600 pt-2">86 99836-7648</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td className="pl-12">
-                                    <p className="text-base font-medium leading-none text-gray-800">Feminino</p>
-                                    <div className="w-24 h-3 bg-gray-100 rounded-full mt-2">
-                                        <div className="w-20 h-3 bg-green-progress rounded-full" />
-                                    </div>
-                                </td>
-                                <td className="pl-12">
-                                    <p className="font-medium text-base">22/09/1994</p>
-                                   
-                                </td>
-                                <td className="pl-12">
-                                    <p className="font-medium text-base">2</p>
-                             
-                                </td>
-                                <td className="pl-12">
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-green-300 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100">Iniciar Consulta</p>
-                            </button>
-                                </td>
-                              
-                                <td className="pl-12">
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-purple-700 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100">Deletar</p>
-                            </button>
-                                </td>
-                            </tr>
-                            <tr className="h-20 text-sm leading-none text-gray-700 bg-gray-100 hover:bg-gray-200 border-b border-t border-gray-300">
-                                <td className="pl-4 cursor-pointer">
-                                    <div className="flex items-center">
-                                        
-                                        <div className="pl-0">
-                                            <p className="font-medium text-base">Bruna ferreira andrade</p>
-                                            <p className="text-xs leading-3 text-gray-600 pt-2">86 98846-7949</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td className="pl-12">
-                                    <p className="text-base font-medium leading-none text-gray-800">Feminino</p>
-                                    <div className="w-24 h-3 bg-gray-100 rounded-full mt-2">
-                                        <div className="w-20 h-3 bg-green-progress rounded-full" />
-                                    </div>
-                                </td>
-                                <td className="pl-12">
-                                    <p className="font-medium text-base">15/12/1984</p>
-                                   
-                                </td>
-                                <td className="pl-12">
-                                    <p className="font-medium text-base">2</p>
-                             
-                                </td>
-                                <td className="pl-12">
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-green-300 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100">Iniciar Consulta</p>
-                            </button>
-                                </td>
-                              
-                                <td className="pl-12">
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-purple-700 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100">Deletar</p>
-                            </button>
-                                </td>
-                            </tr>
-  
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-       
-                  </div>
-            </div>
-        </div>
    </>
   )
 }

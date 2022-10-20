@@ -1,10 +1,10 @@
 import { Header } from "../../components/Header";
 import Sidebar from "../../components/Sidebar";
-import { PacientesLi } from "../../components/User/pacientes";
+import { Agendali } from "../../components/User/agenda";
 
 
 
-export default function Pacientes () {
+export default function Agenda () {
   return (
    <>
  <Header/>
@@ -12,7 +12,7 @@ export default function Pacientes () {
             <Sidebar/>
             
             <div className="container mx-auto py-10 h-64 md:w-4/5 w-11/12 px-6">
-               <PacientesLi/>
+               <Agendali />
             </div>
         </div>
  </>
