@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaHandPeace, FaUserAlt, FaCalendarAlt } from "react-icons/fa";
 import { Header } from "../../components/Header";
+import Modal from "../../components/User/newpaciente";
 
 export default function Dashboard() {
     const [show, setShow] = useState(null)
@@ -27,7 +28,7 @@ export default function Dashboard() {
                     </ul>
                 </div>
                 <div className="flex mt-6 md:mt-0">
-                    <button className=" flex mr-3 bg-green-300 focus:outline-none transition duration-150 ease-in-out rounded hover:bg-green-500 text-indigo-700 dark:text-gray-100 px-6 py-4 text-lg font-bold"> <FaUserAlt size={22} className="mr-2"/> Novo Paciente</button>
+                    <Modal/>
                     <button  className=" flex transition bg-purple-700 focus:outline-none duration-150 ease-in-out hover:bg-purple-500 rounded text-white px-6 py-4 text-lg font-bold"><FaCalendarAlt size={22} className="mr-2"/> Agenda</button>
                 </div>
                 {/* Code block ends */}
