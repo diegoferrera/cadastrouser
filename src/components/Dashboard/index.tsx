@@ -30,11 +30,11 @@ export function Subscriber(props: SubscriberProps){
                                     <p className="font-medium text-base">{props.datadenascimento}</p>
                                    
                                 </td>
-                                <td className="pl-20">
+                                <td className="pl-12">
                                     <p className="font-medium text-base"></p>
                              
                                 </td>
-                                <td className="pl-20">
+                                <td className="pl-12">
                                 <Link href="/pacientes/consulta" passHref>
                                 <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-green-300 hover:bg-indigo-600 focus:outline-none rounded">
                                 <p className="text-sm font-medium leading-none text-gray-100">Iniciar Consulta</p>

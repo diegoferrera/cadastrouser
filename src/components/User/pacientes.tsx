@@ -1,6 +1,32 @@
+import { useQuery, gql } from '@apollo/client';
 import { FaTrash } from "react-icons/fa";
+import { Subscriber } from '../Dashboard';
+const GET_SUBSCRIBERS_QUERY = gql`
+query {
+    subscribers(orderBy: createdAt_DESC, stage: DRAFT) {
+    id
+    name
+    email
+    telefone
+    sexo
+    datadenascimento
+  }
+}
+`
+interface GetSubscribersQueryResponse {
+    subscribers: {
+    id: string
+    name: string
+    email: string
+    telefone: string
+    sexo: string
+    datadenascimento: string
+       
+    } []
+}
 
 export function PacientesLi (){
+    const { data } = useQuery<GetSubscribersQueryResponse>(GET_SUBSCRIBERS_QUERY)
   return(
     <>
      <div className="w-full h-full rounded border-dashed border-2 border-gray-300">
@@ -21,184 +47,24 @@ export function PacientesLi (){
                                 <th className="font-normal text-left pl-4">Nome</th>
                                 <th className="font-normal text-left pl-12">Sexo</th>
                                 <th className="font-normal text-left pl-8">Nascimento</th>
-                                <th className="font-normal text-left pl-8">Consultas</th>
+                                
                                 
                             </tr>
                         </thead>
                         <tbody className="w-full">
-                            <tr className="h-20 text-sm leading-none text-gray-700 bg-gray-100 hover:bg-gray-200 border-b border-t border-gray-300">
-                                <td className="pl-4 cursor-pointer">
-                                    <div className="flex items-center">
-                                        <div className="pl-0">
-                                            <p className="font-medium text-base">Diego ferreira Batista</p>
-                                            <p className="text-xs leading-3 text-gray-600 pt-2">86 998263658</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td className="pl-8">
-                                    <p className="text-base font-medium leading-none text-gray-800">Masculino</p>
-                                    
-                                </td>
-                                <td className="pl-8">
-                                    <p className="font-medium text-base">28/11/1993</p>
-                                   
-                                </td>
-                                <td className="pl-8">
-                                    <p className="font-medium text-base">4</p>
-                             
-                                </td>
-                                <td className="pl-8">
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-green-300 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100">Iniciar Consulta</p>
-                            </button>
-                                </td>
-                              
-                                <td className="pl-8">
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-purple-700 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100"><FaTrash/></p>
-                            </button>
-                                </td>
-                            </tr>
-                            <tr className="h-20 text-sm leading-none text-gray-700 bg-gray-100 hover:bg-gray-200 border-b border-t border-gray-300">
-                                <td className="pl-4 cursor-pointer">
-                                    <div className="flex items-center">
-                                        
-                                        <div className="pl-0">
-                                            <p className="font-medium text-base">Fernanda Teresina Brito</p>
-                                            <p className="text-xs leading-3 text-gray-600 pt-2">86 99836-7648</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td className="pl-8">
-                                    <p className="text-base font-medium leading-none text-gray-800">Feminino</p>
-                                    
-                                </td>
-                                <td className="pl-8">
-                                    <p className="font-medium text-base">22/13/1994</p>
-                                   
-                                </td>
-                                <td className="pl-8">
-                                    <p className="font-medium text-base">2</p>
-                                </td>
-                                <td className="pl-8">
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-green-300 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100">Iniciar Consulta</p>
-                            </button>
-                                </td>
-                              
-                                <td className="pl-8">
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-purple-700 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100"><FaTrash/></p>
-                            </button>
-                                </td>
-                            </tr>
-                            <tr className="h-20 text-sm leading-none text-gray-700 bg-gray-100 hover:bg-gray-200 border-b border-t border-gray-300">
-                                <td className="pl-4 cursor-pointer">
-                                    <div className="flex items-center">
-                                        
-                                        <div className="pl-0">
-                                            <p className="font-medium text-base">Fernando oliveira Brito</p>
-                                            <p className="text-xs leading-3 text-gray-600 pt-2">86 9887-2648</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td className="pl-8">
-                                    <p className="text-base font-medium leading-none text-gray-800">Feminino</p>
-                                    <div className="w-24 h-3 bg-gray-100 rounded-full mt-2">
-                                        <div className="w-20 h-3 bg-green-progress rounded-full" />
-                                    </div>
-                                </td>
-                                <td className="pl-8">
-                                    <p className="font-medium text-base">10/09/1992</p>
-                                   
-                                </td>
-                                <td className="pl-8">
-                                    <p className="font-medium text-base">2</p>
-                             
-                                </td>
-                                <td className="pl-8">
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-green-300 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100">Iniciar Consulta</p>
-                            </button>
-                                </td>
-                              
-                                <td className="pl-8">
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-purple-700 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100"><FaTrash/></p>
-                            </button>
-                                </td>
-                            </tr>
-                            <tr className="h-20 text-sm leading-none text-gray-700 bg-gray-100 hover:bg-gray-200 border-b border-t border-gray-300">
-                                <td className="pl-4 cursor-pointer">
-                                    <div className="flex items-center">
-                                        
-                                        <div className="pl-0">
-                                            <p className="font-medium text-base">Rafael junho Brito</p>
-                                            <p className="text-xs leading-3 text-gray-600 pt-2">86 94546-6638</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td className="pl-8">
-                                    <p className="text-base font-medium leading-none text-gray-800">Feminino</p>
-                                    <div className="w-24 h-3 bg-gray-100 rounded-full mt-2">
-                                        <div className="w-20 h-3 bg-green-progress rounded-full" />
-                                    </div>
-                                </td>
-                                <td className="pl-8">
-                                    <p className="font-medium text-base">10/05/2000</p>
-                                   
-                                </td>
-                                <td className="pl-8">
-                                    <p className="font-medium text-base">2</p>
-                             
-                                </td>
-                                <td className="pl-8">
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-green-300 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100">Iniciar Consulta</p>
-                            </button>
-                                </td>
-                              
-                                <td className="pl-8">
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-purple-700 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100"><FaTrash/></p>
-                            </button>
-                                </td>
-                            </tr>
-                            <tr className="h-20 text-sm leading-none text-gray-700 bg-gray-100 hover:bg-gray-200 border-b border-t border-gray-300">
-                                <td className="pl-4 cursor-pointer">
-                                    <div className="flex items-center">
-                                        
-                                        <div className="pl-0">
-                                            <p className="font-medium text-base">Bruna Teresina Brito</p>
-                                            <p className="text-xs leading-3 text-gray-600 pt-2">86 99836-7648</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td className="pl-8">
-                                    <p className="text-base font-medium leading-none text-gray-800">Feminino</p>
-                                    
-                                </td>
-                                <td className="pl-8">
-                                    <p className="font-medium text-base">10/08/1984</p>
-                                   
-                                </td>
-                                <td className="pl-8">
-                                    <p className="font-medium text-base">1</p>
-                             
-                                </td>
-                                <td className="pl-8">
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-green-300 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100">Iniciar Consulta</p>
-                            </button>
-                                </td>
-                              
-                                <td className="pl-8">
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-purple-700 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100"><FaTrash/></p>
-                            </button>
-                                </td>
-                            </tr>
-                           
+                            
+                        {data?.subscribers.map(subscribers => {
+                            return (
+                                <Subscriber
+                                        key={subscribers.id}
+                                        name={subscribers.name}
+                                        telefone={subscribers.telefone}
+                                        sexo={subscribers.sexo}
+                                        datadenascimento={subscribers.datadenascimento}
+                                    />
+                               
+                            )
+                           })}
                            
   
                         </tbody>

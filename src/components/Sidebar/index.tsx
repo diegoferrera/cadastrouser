@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 export default function Sidebar () {
   return (
@@ -10,6 +11,7 @@ export default function Sidebar () {
                        <p className="text-2xl text-gray-400 font-medium">Cadastros</p>
                     </div>
                     <ul className="mt-12">
+                        <Link href="/cardapio/alimentos">
                     <li className="flex w-full justify-between text-gray-500 hover:text-green-500 cursor-pointer items-center mb-6">
                             <div className="flex items-center">
                               
@@ -17,6 +19,15 @@ export default function Sidebar () {
                             </div>
                             
                         </li>
+                        </Link>
+                        <Link href="/suplementos">
+                        <li className="flex w-full justify-between text-gray-600 hover:text-green-500 cursor-pointer items-center mb-6">
+                            <div className="flex items-center">
+                                
+                                <span className="text-lg font-medium  ml-2">Suplementos</span>
+                            </div>
+                        </li>
+                        </Link>
                         <li className="flex w-full justify-between text-gray-600 hover:text-green-500 cursor-pointer items-center mb-6">
                             <div className="flex items-center">
                                 
@@ -30,12 +41,7 @@ export default function Sidebar () {
                                 <span className="text-lg font-medium  ml-2">Fitoterápicos</span>
                             </div>
                         </li>
-                        <li className="flex w-full justify-between text-gray-600 hover:text-green-500 cursor-pointer items-center mb-6">
-                            <div className="flex items-center">
-                                
-                                <span className="text-lg font-medium  ml-2">Suplementos</span>
-                            </div>
-                        </li>
+                        
                         <li className="flex w-full justify-between text-gray-600 hover:text-green-500 cursor-pointer items-center mb-6">
                             <div className="flex items-center">
                                 

@@ -82,7 +82,7 @@ export default function Dashboard () {
                                 <th className="font-normal text-left pl-4">Nome</th>
                                 <th className="font-normal text-left pl-12">Sexo</th>
                                 <th className="font-normal text-left pl-12">Nascimento</th>
-                                <th className="font-normal text-left pl-20">Consultas</th>
+                               
                                 
                             </tr>
                         </thead>

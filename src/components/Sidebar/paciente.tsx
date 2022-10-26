@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaRegSave, FaUserAlt } from "react-icons/fa";
 import Image from 'next/image'
+import Link from "next/link";
 
 export default function Sidebarpaciente () {
   const [show, setShow] = useState(true);
@@ -65,11 +66,13 @@ export default function Sidebarpaciente () {
                                 <span className="text-lg font-medium  ml-2">Prescricão Dietica</span>
                             </div>
                         </li>
+                        <Link href="consulta">
                         <li className="flex w-full justify-between bg-green-300 text-gray-100 hover:text-gray-500 cursor-pointer items-center mb-2 mt-4 rounded">
                             <div className="flex items-center">
                                 <span className="flex text-lg rounded font-medium ml-2 p-2"><FaRegSave size={20} color="#fff" className="mt-1"/>Finalizar Consulta</span>
                             </div>
                         </li>
+                        </Link>
                     </ul>
                     <div className="flex justify-center mt-48 mb-4 w-full">
                         <div className="relative ">
