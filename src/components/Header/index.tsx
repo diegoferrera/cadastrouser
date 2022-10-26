@@ -94,7 +94,7 @@ export function Header () {
                                         </Link>
                                     </div>
                                 </li>
-                                <li className="flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+                                <li className="flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 items-center focus:text-indigo-700 focus:outline-none">
                                   
                                     <span className="ml-2 font-bold">Pacientes</span>
                                 </li>
@@ -149,7 +149,7 @@ export function Header () {
                     {/*Mobile responsive sidebar*/}
                     <div className={show ? "absolute xl:hidden w-full h-full transform -translate-x-0 z-40" : "absolute xl:hidden w-full h-full transform -translate-x-full z-40"} id="mobile-nav">
                         <div className="bg-gray-800 opacity-50 w-full h-full" onClick={() => setShow(!show)} />
-                        <div className="w-64 z-40 fixed overflow-y-auto z-40 top-0 bg-white shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out bg-gray-700">
+                        <div className="w-64 z-40 fixed overflow-y-auto top-0 bg-white shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out bg-gray-700">
                             <div className="px-6 h-full">
                                 <div className="flex flex-col justify-between h-full w-full">
                                     <div>

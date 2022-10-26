@@ -1,12 +1,39 @@
 
+import { useQuery, gql } from '@apollo/client';
 import Link from "next/link";
 import { useState } from "react";
 import { FaHandPeace, FaUserAlt, FaCalendarAlt } from "react-icons/fa";
+import { Subscriber } from '../../components/Dashboard';
 import { Header } from "../../components/Header";
 import Modal from "../../components/User/newpaciente";
 
-export default function Dashboard() {
-    const [show, setShow] = useState(null)
+const GET_SUBSCRIBERS_QUERY = gql`
+query {
+    subscribers(orderBy: createdAt_DESC, stage: DRAFT) {
+    id
+    name
+    email
+    telefone
+    sexo
+    datadenascimento
+  }
+}
+`
+interface GetSubscribersQueryResponse {
+    subscribers: {
+    id: string
+    name: string
+    email: string
+    telefone: string
+    sexo: string
+    datadenascimento: string
+       
+    } []
+}
+
+export default function Dashboard () {
+    const { data } = useQuery<GetSubscribersQueryResponse>(GET_SUBSCRIBERS_QUERY)
+    
   return (
     <>
     <Header/>
@@ -29,7 +56,9 @@ export default function Dashboard() {
                 </div>
                 <div className="flex mt-6 md:mt-0">
                     <Modal/>
+                    <Link href="/agenda">
                     <button  className=" flex transition bg-purple-700 focus:outline-none duration-150 ease-in-out hover:bg-purple-500 rounded text-white px-6 py-4 text-lg font-bold"><FaCalendarAlt size={22} className="mr-2"/> Agenda</button>
+                    </Link>
                 </div>
                 {/* Code block ends */}
             </div>
@@ -58,206 +87,198 @@ export default function Dashboard() {
                             </tr>
                         </thead>
                         <tbody className="w-full">
-                            <tr className="h-20 text-sm leading-none text-gray-700 bg-gray-100 hover:bg-gray-200 border-b border-t border-gray-300">
-                                <td className="pl-4 cursor-pointer">
-                                    <div className="flex items-center">
-                                        
-                                        <div className="pl-0">
-                                            <p className="font-medium text-base">Diego ferreira Batista</p>
-                                            <p className="text-xs leading-3 text-gray-600 pt-2">86 998263658</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td className="pl-12">
-                                    <p className="text-base font-medium leading-none text-gray-800">Masculino</p>
-                                    <div className="w-24 h-3 bg-gray-100 rounded-full mt-2">
-                                        <div className="w-20 h-3 bg-green-progress rounded-full" />
-                                    </div>
-                                </td>
-                                <td className="pl-12">
-                                    <p className="font-medium text-base">28/11/1993</p>
-                                   
-                                </td>
-                                <td className="pl-20">
-                                    <p className="font-medium text-base">4</p>
-                             
-                                </td>
-                                <td className="pl-20">
-                                <Link href="/pacientes/consulta" passHref>
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-green-300 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100">Iniciar Consulta</p>
-                                </button>
-                                </Link>
-                                </td>
-                              
-                                <td className="pl-20">
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-purple-700 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100">Deletar</p>
-                            </button>
-                                </td>
-                            </tr>
-                            <tr className="h-20 text-sm leading-none text-gray-700 bg-gray-100 hover:bg-gray-200 border-b border-t border-gray-300">
-                                <td className="pl-4 cursor-pointer">
-                                    <div className="flex items-center">
-                                        
-                                        <div className="pl-0">
-                                            <p className="font-medium text-base">Fernanda Teresina Brito</p>
-                                            <p className="text-xs leading-3 text-gray-600 pt-2">86 99836-7648</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td className="pl-12">
-                                    <p className="text-base font-medium leading-none text-gray-800">Feminino</p>
-                                    <div className="w-24 h-3 bg-gray-100 rounded-full mt-2">
-                                        <div className="w-20 h-3 bg-green-progress rounded-full" />
-                                    </div>
-                                </td>
-                                <td className="pl-12">
-                                    <p className="font-medium text-base">22/13/1994</p>
-                                   
-                                </td>
-                                <td className="pl-20">
-                                    <p className="font-medium text-base">2</p>
-                             
-                                </td>
-                                <td className="pl-20">
-                                <Link href="/pacientes/consulta" passHref>
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-green-300 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100">Iniciar Consulta</p>
-                            </button>
-                                </Link>
-                                </td>
-                              
-                                <td className="pl-20">
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-purple-700 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100">Deletar</p>
-                            </button>
-                                </td>
-                            </tr>
-                            <tr className="h-20 text-sm leading-none text-gray-700 bg-gray-100 hover:bg-gray-200 border-b border-t border-gray-300">
-                                <td className="pl-4 cursor-pointer">
-                                    <div className="flex items-center">
-                                        
-                                        <div className="pl-0">
-                                            <p className="font-medium text-base">Fernando oliveira Brito</p>
-                                            <p className="text-xs leading-3 text-gray-600 pt-2">86 9887-2648</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td className="pl-12">
-                                    <p className="text-base font-medium leading-none text-gray-800">Feminino</p>
-                                    <div className="w-24 h-3 bg-gray-100 rounded-full mt-2">
-                                        <div className="w-20 h-3 bg-green-progress rounded-full" />
-                                    </div>
-                                </td>
-                                <td className="pl-12">
-                                    <p className="font-medium text-base">10/09/1992</p>
-                                   
-                                </td>
-                                <td className="pl-20">
-                                    <p className="font-medium text-base">2</p>
-                             
-                                </td>
-                                <td className="pl-20">
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-green-300 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100">Iniciar Consulta</p>
-                            </button>
-                                </td>
-                              
-                                <td className="pl-20">
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-purple-700 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100">Deletar</p>
-                            </button>
-                                </td>
-                            </tr>
-                            <tr className="h-20 text-sm leading-none text-gray-700 bg-gray-100 hover:bg-gray-200 border-b border-t border-gray-300">
-                                <td className="pl-4 cursor-pointer">
-                                    <div className="flex items-center">
-                                        
-                                        <div className="pl-0">
-                                            <p className="font-medium text-base">Rafael junho Brito</p>
-                                            <p className="text-xs leading-3 text-gray-600 pt-2">86 94546-6638</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td className="pl-12">
-                                    <p className="text-base font-medium leading-none text-gray-800">Feminino</p>
-                                    <div className="w-24 h-3 bg-gray-100 rounded-full mt-2">
-                                        <div className="w-20 h-3 bg-green-progress rounded-full" />
-                                    </div>
-                                </td>
-                                <td className="pl-12">
-                                    <p className="font-medium text-base">10/05/2000</p>
-                                   
-                                </td>
-                                <td className="pl-20">
-                                    <p className="font-medium text-base">2</p>
-                             
-                                </td>
-                                <td className="pl-20">
-                                <Link href="/pacientes/consulta" passHref>
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-green-300 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100">Iniciar Consulta</p>
-                            </button>
-                            </Link>
-                                </td>
-                              
-                                <td className="pl-20">
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-purple-700 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100">Deletar</p>
-                            </button>
-                                </td>
-                            </tr>
-                            <tr className="h-20 text-sm leading-none text-gray-700 bg-gray-100 hover:bg-gray-200 border-b border-t border-gray-300">
-                                <td className="pl-4 cursor-pointer">
-                                    <div className="flex items-center">
-                                        
-                                        <div className="pl-0">
-                                            <p className="font-medium text-base">Bruna Teresina Brito</p>
-                                            <p className="text-xs leading-3 text-gray-600 pt-2">86 99836-7648</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td className="pl-12">
-                                    <p className="text-base font-medium leading-none text-gray-800">Feminino</p>
-                                    <div className="w-24 h-3 bg-gray-100 rounded-full mt-2">
-                                        <div className="w-20 h-3 bg-green-progress rounded-full" />
-                                    </div>
-                                </td>
-                                <td className="pl-12">
-                                    <p className="font-medium text-base">10/08/1984</p>
-                                   
-                                </td>
-                                <td className="pl-20">
-                                    <p className="font-medium text-base">1</p>
-                             
-                                </td>
-                                <td className="pl-20">
-                                <Link href="/pacientes/consulta" passHref>
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-green-300 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100">Iniciar Consulta</p>
-                            </button>
-                            </Link>
-                                </td>
-                              
-                                <td className="pl-20">
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-purple-700 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100">Deletar</p>
-                            </button>
-                                </td>
-                            </tr>
-                           
-                           
-  
+                           {data?.subscribers.map(subscribers => {
+                            return (
+                                <Subscriber
+                                        key={subscribers.id}
+                                        name={subscribers.name}
+                                        telefone={subscribers.telefone}
+                                        sexo={subscribers.sexo}
+                                        datadenascimento={subscribers.datadenascimento}
+                                    />
+                               
+                            )
+                           })}
+                               
                         </tbody>
                     </table>
                 </div>
             </div>
-       
-    
 
+            <div>
+            <div className="container flex justify-center mx-auto pt-12">
+                <div>
+                    <p className="xl:text-5xl text-2xl text-gray-500 text-center font-black pb-3">Relatório</p>
+                   
+                </div>
+
+            </div>
+
+        </div>
+
+        <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 pt-6 gap-8">
+                {/* Remove class [ h-24 ] when adding a card block */}
+                {/* Remove class [ border-gray-300  dark:border-gray-700 border-dashed border-2 ] to remove dotted border */}
+                <div className="rounded">
+                <div className="rounded flex bg-gray-300 flex-col justify-start items-start p-8 border-green-300 border-l-8 ">
+            <div>
+          
+          </div>
+            <div className="md:mt-3">
+            <p className="text-gray-400  lg:text-2xl text-2xl font-extrabold leading-9">Quantidade de atendimentos</p>
+            </div>
+            <div className="md:mt-3">
+            <p className="lg:text-base text-sm leading-normal text-gray-600">0</p>
+
+
+            </div>
+           
+            
+            </div>
+                </div>
+                {/* Remove class [ h-24 ] when adding a card block */}
+                {/* Remove class [ border-gray-300  dark:border-gray-700 border-dashed border-2 ] to remove dotted border */}
+                <div className="rounded">
+                <div className="rounded flex bg-gray-300 flex-col justify-start items-start p-8 border-green-300 border-l-8 ">
+            <div>
+          
+          </div>
+            <div className="md:mt-3">
+            <p className="text-gray-400  lg:text-2xl text-2xl font-extrabold leading-9">Total de atendimento do mês</p>
+            </div>
+            <div className="md:mt-3">
+            <p className="lg:text-base text-sm leading-normal text-gray-600">0</p>
+
+
+            </div>
+           
+            
+            </div>
+                </div>
+                {/* Remove class [ h-24 ] when adding a card block */}
+                {/* Remove class [ border-gray-300  dark:border-gray-700 border-dashed border-2 ] to remove dotted border */}
+                <div className="rounded">
+                <div className="rounded flex bg-gray-300 flex-col justify-start items-start p-8 border-green-300 border-l-8 ">
+            <div>
+          
+          </div>
+            <div className="md:mt-3">
+            <p className="text-gray-400  lg:text-2xl text-2xl font-extrabold leading-9">Pacientes sob intervenção nutricional</p>
+            </div>
+            <div className="md:mt-3">
+            <p className="lg:text-base text-sm leading-normal text-gray-600">0</p>
+
+
+            </div>
+           
+            
+            </div>
+                </div>
+                {/* Remove class [ h-24 ] when adding a card block */}
+                {/* Remove class [ border-gray-300  dark:border-gray-700 border-dashed border-2 ] to remove dotted border */}
+                <div className="rounded">
+                <div className="rounded flex bg-gray-300 flex-col justify-start items-start p-8 border-green-300 border-l-8 ">
+            <div>
+          
+          </div>
+            <div className="md:mt-3">
+            <p className="text-gray-400  lg:text-2xl text-2xl font-extrabold leading-9">Quantidade pacientes Eutróficos</p>
+            </div>
+            <div className="md:mt-3">
+            <p className="lg:text-base text-sm leading-normal text-gray-600">0</p>
+
+
+            </div>
+           
+            
+            </div>
+                </div>
+            </div>
+    
+        <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 pt-6 gap-8">
+                {/* Remove class [ h-24 ] when adding a card block */}
+                {/* Remove class [ border-gray-300  dark:border-gray-700 border-dashed border-2 ] to remove dotted border */}
+                <div className="rounded">
+                <div className="rounded flex bg-gray-300 flex-col justify-start items-start p-8 border-green-300 border-l-8 ">
+            <div>
+          
+          </div>
+            <div className="md:mt-3">
+            <p className="text-gray-400  lg:text-2xl text-2xl font-extrabold leading-9">Quant. pacientes Risco de Desnutrição</p>
+            </div>
+            <div className="md:mt-3">
+            <p className="lg:text-base text-sm leading-normal text-gray-600">0</p>
+
+
+            </div>
+           
+            
+            </div>
+                </div>
+                {/* Remove class [ h-24 ] when adding a card block */}
+                {/* Remove class [ border-gray-300  dark:border-gray-700 border-dashed border-2 ] to remove dotted border */}
+                <div className="rounded">
+                <div className="rounded flex bg-gray-300 flex-col justify-start items-start p-8 border-green-300 border-l-8 ">
+            <div>
+          
+          </div>
+            <div className="md:mt-3">
+            <p className="text-gray-400  lg:text-2xl text-2xl font-extrabold leading-9">Quantidade paciente desnutridos</p>
+            </div>
+            <div className="md:mt-3">
+            <p className="lg:text-base text-sm leading-normal text-gray-600">0</p>
+
+
+            </div>
+           
+            
+            </div>
+                </div>
+                {/* Remove class [ h-24 ] when adding a card block */}
+                {/* Remove class [ border-gray-300  dark:border-gray-700 border-dashed border-2 ] to remove dotted border */}
+                <div className="rounded">
+                <div className="rounded flex bg-gray-300 flex-col justify-start items-start p-8 border-green-300 border-l-8 ">
+            <div>
+          
+          </div>
+            <div className="md:mt-3">
+            <p className="text-gray-400  lg:text-2xl text-2xl font-extrabold leading-9">Quantidade paciente desnutridos</p>
+            </div>
+            <div className="md:mt-3">
+            <p className="lg:text-base text-sm leading-normal text-gray-600">0</p>
+
+
+            </div>
+           
+            
+            </div>
+                </div>
+                {/* Remove class [ h-24 ] when adding a card block */}
+                {/* Remove class [ border-gray-300  dark:border-gray-700 border-dashed border-2 ] to remove dotted border */}
+                <div className="rounded">
+                <div className="rounded flex bg-gray-300 flex-col justify-start items-start p-8 border-green-300 border-l-8 ">
+            <div>
+          
+          </div>
+            <div className="md:mt-3">
+            <p className="text-gray-400  lg:text-2xl text-2xl font-extrabold leading-9">Quantidade paciente Sarcopênicos</p>
+            </div>
+            <div className="md:mt-3">
+            <p className="lg:text-base text-sm leading-normal text-gray-600">0</p>
+
+
+            </div>
+           
+            
+            </div>
+                </div>
+            </div>
+
+            
         
     </div>
+    
+    
     </>
   )
 }

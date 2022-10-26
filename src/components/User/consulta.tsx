@@ -1,4 +1,5 @@
 import { FaCheck, FaTrash } from "react-icons/fa";
+import Link from "next/link";
 
 export function Consultali (){
   return(
@@ -97,9 +98,11 @@ export function Consultali (){
                                
                                 
                                 <td className="pl-8">
+                                <Link href="iniciar">
                                 <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-green-300 hover:bg-indigo-600 focus:outline-none rounded">
                                 <p className="text-sm font-medium leading-none text-gray-100">Continuar Consulta</p>
                             </button>
+                            </Link>
                                 </td>
                               
                                 <td className="pl-2">
@@ -124,9 +127,11 @@ export function Consultali (){
                                
                                 
                                 <td className="pl-8">
+                                <Link href="iniciar">
                                 <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-green-300 hover:bg-indigo-600 focus:outline-none rounded">
                                 <p className="text-sm font-medium leading-none text-gray-100">Continuar Consulta</p>
                             </button>
+                              </Link>
                                 </td>
                               
                                 <td className="pl-2">
@@ -151,9 +156,11 @@ export function Consultali (){
                                
                                 
                                 <td className="pl-8">
+                                <Link href="iniciar">
                                 <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-green-300 hover:bg-indigo-600 focus:outline-none rounded">
                                 <p className="text-sm font-medium leading-none text-gray-100">Continuar Consulta</p>
                             </button>
+                            </Link>
                                 </td>
                               
                                 <td className="pl-2">
