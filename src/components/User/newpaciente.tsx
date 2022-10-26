@@ -2,7 +2,7 @@ import { useMutation, gql } from '@apollo/client';
 import Link from 'next/link';
 import React, { useState, FormEvent } from "react";
 import { FaUserAlt } from "react-icons/fa";
-
+import { useRouter } from 'next/router'
 
 const CREATE_SUBSCRIBER_MUTATION = gql`
 mutation CreateSubscriber($name: String!, $email: String!, $telefone: String, $endereco: String, $convenio: String, $sexo: String, $datadenascimento: String) {
@@ -16,7 +16,7 @@ mutation CreateSubscriber($name: String!, $email: String!, $telefone: String, $e
 
 export default function Modal() {
 
-
+  const router = useRouter()
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [telefone, setTelefone] = useState('');
@@ -24,6 +24,7 @@ export default function Modal() {
   const [datadenascimento, setDatanascimento] = useState('');
   const [convenio, setConvenio] = useState('');
   const [sexo, setSexo] = useState('');
+  const [isLoading, setIsLoading] = useState(false)
   const [showModal, setShowModal] = React.useState(false);
   
   const [createSubscriber] = useMutation(CREATE_SUBSCRIBER_MUTATION)
@@ -31,7 +32,7 @@ export default function Modal() {
 
   function handleSubscribe(event: FormEvent) {
     event.preventDefault();
-
+   
     createSubscriber({
       variables: {
         name,
@@ -42,6 +43,10 @@ export default function Modal() {
         convenio,
         sexo,
       }
+    }).then(res => {
+      localStorage.setItem("user", JSON.stringify(res.data?.createSubscriber))
+      setIsLoading(false)
+      window.location.pathname = "/dashboard"
     })
 
   }
@@ -148,6 +153,7 @@ export default function Modal() {
                   <button
                     className="bg-green-300 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="submit"
+                    onClick={() => router.push('/pacientes')}
                     
                   >
                     Salvar

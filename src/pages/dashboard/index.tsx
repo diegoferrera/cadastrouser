@@ -53,7 +53,7 @@ export default function Dashboard () {
                         </li>
                        
                     </ul>
-                    <h4 className="mt-4 text-lg bg-red-500 rounded text-gray-100 font-bold leading-tight text">Alerta do servidor, reconhecimento de arquivo de oncologia está sincronizando.</h4>
+                    <h4 className="mt-4 text-lg bg-red-500 rounded text-gray-100 font-bold leading-tight text">Alerta do servidor, reconhecimento de arquivo de oncologia está sendo sincronizando.</h4>
                 </div>
                 <div className="flex mt-6 md:mt-0">
                     <Modal/>
