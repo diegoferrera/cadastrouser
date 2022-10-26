@@ -5,6 +5,16 @@ const Tabs = ({ color }) => {
   return (
     <>
       <div className="flex flex-wrap">
+      <div className="px-4 md:px-10 py-4 md:py-4 bg-gray-300 rounded-tl-lg rounded-tr-lg">
+                    <div className="sm:flex items-center justify-between">
+                        <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold leading-normal text-gray-700">Antropometria</p>
+                        <div>
+                       
+                  
+                           
+                        </div>
+                    </div>
+                </div>
         <div className="w-full">
           <ul
             className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row"
@@ -377,6 +387,7 @@ const Tabs = ({ color }) => {
                 
                 <div className="rounded">
                 <div className="bg-gray-300 py-8 pl-2">
+
                 <label htmlFor="text" className="dark:text-gray-500 text-lg font-bold leading-tight tracking-normal mb-2">
                 Circunferências
                     </label>

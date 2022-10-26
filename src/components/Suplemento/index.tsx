@@ -1,6 +1,7 @@
 import { FaTrash } from "react-icons/fa";
 
 export function Suplementosli (){
+    
   return(
     <>
      <div className="w-full h-full rounded border-dashed border-2 border-gray-300">

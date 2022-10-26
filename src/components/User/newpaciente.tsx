@@ -134,6 +134,7 @@ export default function Modal() {
                        
                       </select>
                       </div>
+                      <div></div>
 
                      
                       <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
@@ -152,11 +153,23 @@ export default function Modal() {
                     Salvar
                   </button>
                  
+                 
                   
                 </div>
                 
                 
                 </form>
+                <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+                <p className="text-gray-500 pr-10">Clique em salvar e depois em confirma</p>
+                <Link href="/pacientes">
+                  <button
+                    className="bg-purple-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    type="button"
+                    
+                  >
+                    Confirma
+                  </button></Link>
+                </div>
                 </div>
                 {/*footer*/}
                 

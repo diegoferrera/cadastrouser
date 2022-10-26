@@ -53,6 +53,7 @@ export default function Dashboard () {
                         </li>
                        
                     </ul>
+                    <h4 className="mt-4 text-lg bg-red-500 rounded text-gray-100 font-bold leading-tight text">Alerta do servidor, reconhecimento de arquivo de oncologia está sincronizando.</h4>
                 </div>
                 <div className="flex mt-6 md:mt-0">
                     <Modal/>
@@ -128,7 +129,7 @@ export default function Dashboard () {
             <p className="text-gray-400  lg:text-2xl text-2xl font-extrabold leading-9">Quantidade de atendimentos</p>
             </div>
             <div className="md:mt-3">
-            <p className="lg:text-base text-sm leading-normal text-gray-600">0</p>
+            <p className="lg:text-base text-sm leading-normal text-gray-600">Carregando...</p>
 
 
             </div>
@@ -147,7 +148,7 @@ export default function Dashboard () {
             <p className="text-gray-400  lg:text-2xl text-2xl font-extrabold leading-9">Total de atendimento do mês</p>
             </div>
             <div className="md:mt-3">
-            <p className="lg:text-base text-sm leading-normal text-gray-600">0</p>
+            <p className="lg:text-base text-sm leading-normal text-gray-600">Carregando...</p>
 
 
             </div>
@@ -166,7 +167,7 @@ export default function Dashboard () {
             <p className="text-gray-400  lg:text-2xl text-2xl font-extrabold leading-9">Pacientes sob intervenção nutricional</p>
             </div>
             <div className="md:mt-3">
-            <p className="lg:text-base text-sm leading-normal text-gray-600">0</p>
+            <p className="lg:text-base text-sm leading-normal text-gray-600">Carregando...</p>
 
 
             </div>
@@ -185,7 +186,7 @@ export default function Dashboard () {
             <p className="text-gray-400  lg:text-2xl text-2xl font-extrabold leading-9">Quantidade pacientes Eutróficos</p>
             </div>
             <div className="md:mt-3">
-            <p className="lg:text-base text-sm leading-normal text-gray-600">0</p>
+            <p className="lg:text-base text-sm leading-normal text-gray-600">Carregando...</p>
 
 
             </div>
@@ -207,7 +208,7 @@ export default function Dashboard () {
             <p className="text-gray-400  lg:text-2xl text-2xl font-extrabold leading-9">Quant. pacientes Risco de Desnutrição</p>
             </div>
             <div className="md:mt-3">
-            <p className="lg:text-base text-sm leading-normal text-gray-600">0</p>
+            <p className="lg:text-base text-sm leading-normal text-gray-600">Carregando...</p>
 
 
             </div>
@@ -226,7 +227,7 @@ export default function Dashboard () {
             <p className="text-gray-400  lg:text-2xl text-2xl font-extrabold leading-9">Quantidade paciente desnutridos</p>
             </div>
             <div className="md:mt-3">
-            <p className="lg:text-base text-sm leading-normal text-gray-600">0</p>
+            <p className="lg:text-base text-sm leading-normal text-gray-600">Carregando...</p>
 
 
             </div>
@@ -245,7 +246,7 @@ export default function Dashboard () {
             <p className="text-gray-400  lg:text-2xl text-2xl font-extrabold leading-9">Quantidade paciente desnutridos</p>
             </div>
             <div className="md:mt-3">
-            <p className="lg:text-base text-sm leading-normal text-gray-600">0</p>
+            <p className="lg:text-base text-sm leading-normal text-gray-600">Carregando...</p>
 
 
             </div>
@@ -264,7 +265,7 @@ export default function Dashboard () {
             <p className="text-gray-400  lg:text-2xl text-2xl font-extrabold leading-9">Quantidade paciente Sarcopênicos</p>
             </div>
             <div className="md:mt-3">
-            <p className="lg:text-base text-sm leading-normal text-gray-600">0</p>
+            <p className="lg:text-base text-sm leading-normal text-gray-600">Carregando...</p>
 
 
             </div>

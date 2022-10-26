@@ -3,6 +3,7 @@ import { FaRegSave, FaUserAlt } from "react-icons/fa";
 import Image from 'next/image'
 import Link from "next/link";
 
+
 export default function Sidebarpaciente () {
   const [show, setShow] = useState(true);
   return (
@@ -27,6 +28,7 @@ export default function Sidebarpaciente () {
                 
                     
                     <ul className="mt-6">
+                        
                     <li className="flex w-full justify-between text-gray-500 hover:text-green-500 cursor-pointer items-center mb-2 pb-2 border-gray-400 border-b">
                             <div className="flex items-center">
                               
