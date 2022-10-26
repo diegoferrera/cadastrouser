@@ -11,7 +11,7 @@ return (
             <div className="bg-gray-300 px-16 pb-16 pt-10">
                 <div className="xl:px-2 md:px-2 sm:px-2 px-2 md:py-2 py-2 2xl:mx-auto 2xl:container md:flex items-center justify-center">
                     <div className=" md:hidden sm:mb-8 mb-6">
-                    <h1 className="text-2xl font-light text-green-300">ONCO<span className="text-purple-700 font-bold">NUTRI</span></h1>
+                    <h1 className="text-3xl font-light text-green-300">ONCO<span className="text-purple-700 font-bold">NUTRI</span></h1>
                     </div>
                     <div className="bg-white shadow-lg rounded xl:w-1/2 lg:w-5/12 md:w-1/2 w-full lg:px-10 sm:px-6 sm:py-10 px-2 py-6">
                         <p tabIndex={0} className="focus:outline-none text-2xl font-extrabold leading-6 text-gray-700">
