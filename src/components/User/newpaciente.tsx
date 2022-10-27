@@ -116,8 +116,13 @@ export default function Modal() {
                 className="bg-gray-300 rounded border border-gray-400 px5 h-14 text-gray-500" onChange={event => setConvenio(event.target.value)}>
                         <option>Particular</option>
                         <option>Iapep</option>
+                        <option>IPMT</option>
                         <option>Unimed</option>
-                       
+                        <option>Plano Econômico</option>
+                        <option>Fusex</option>
+                        <option>Cassi</option>
+                        <option>Hapvida</option>
+                        
                       </select>
                       </div>
                       <div className="flex flex-col">

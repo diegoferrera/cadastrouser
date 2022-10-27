@@ -41,7 +41,7 @@ export default function Sidebarpaciente () {
                             </div>
                             
                         </li>
-                        <Link href="/iniciar">
+                        <Link href="/pacientes/iniciar">
                         <li className="flex w-full justify-between text-gray-600 hover:text-green-500 cursor-pointer items-center mb-2 pb-2 border-gray-400 border-b">
                             <div className="flex items-center">
                                 

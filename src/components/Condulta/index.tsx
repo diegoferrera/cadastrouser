@@ -18,8 +18,8 @@ export function Condultali (props: ConsultaProps) {
                 <div className="flex items-center mb-4 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0">
                     
                     <div className="ml-2">
-                        <h2 className=" dark:text-gray-500 text-sm font-bold">Carregando</h2>
-                        <p className="font-normal text-xs text-gray-600 dark:text-gray-400 cursor-pointer hover:text-gray-700">carregando</p>
+                        <h2 className=" dark:text-gray-500 text-sm font-bold">{props.name}</h2>
+                        <p className="font-normal text-xs text-gray-600 dark:text-gray-400 cursor-pointer hover:text-gray-700">{props.description}</p>
                     </div>
                 </div>
                 <div>
