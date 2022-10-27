@@ -126,7 +126,7 @@ export default function Modal() {
                     </label>
                 <select id="sexo" name="sexo" autoComplete="country-name"
                 className="bg-gray-300 rounded border border-gray-400 px5 h-14 text-gray-500" onChange={event => setSexo(event.target.value)}>
-                        <option>Masculilo</option>
+                        <option>Masculino</option>
                         <option>Feminino</option>
                        
                       </select>
