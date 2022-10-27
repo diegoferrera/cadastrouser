@@ -17047,10 +17047,10 @@ export type CreateSubscriberMutationVariables = Exact<{
 
 export type CreateSubscriberMutation = { __typename?: 'Mutation', createSubscriber?: { __typename?: 'Subscriber', id: string } | null };
 
-export type GetCondultaQueryVariables = Exact<{ [key: string]: never; }>;
+export type GetCondultaDataQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetCondultaQuery = { __typename?: 'Query', condultas: Array<{ __typename?: 'Condulta', name?: string | null, description?: string | null }> };
+export type GetCondultaDataQuery = { __typename?: 'Query', condultas: Array<{ __typename?: 'Condulta', id: string, name?: string | null, description?: string | null }> };
 
 export type GetConsultaDataQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -17142,9 +17142,10 @@ export function useCreateSubscriberMutation(baseOptions?: Apollo.MutationHookOpt
 export type CreateSubscriberMutationHookResult = ReturnType<typeof useCreateSubscriberMutation>;
 export type CreateSubscriberMutationResult = Apollo.MutationResult<CreateSubscriberMutation>;
 export type CreateSubscriberMutationOptions = Apollo.BaseMutationOptions<CreateSubscriberMutation, CreateSubscriberMutationVariables>;
-export const GetCondultaDocument = gql`
-    query GetCondulta {
-  condultas {
+export const GetCondultaDataDocument = gql`
+    query GetCondultaData {
+  condultas(orderBy: createdAt_DESC, stage: DRAFT) {
+    id
     name
     description
   }
@@ -17152,34 +17153,34 @@ export const GetCondultaDocument = gql`
     `;
 
 /**
- * __useGetCondultaQuery__
+ * __useGetCondultaDataQuery__
  *
- * To run a query within a React component, call `useGetCondultaQuery` and pass it any options that fit your needs.
- * When your component renders, `useGetCondultaQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * To run a query within a React component, call `useGetCondultaDataQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetCondultaDataQuery` returns an object from Apollo Client that contains loading, error, and data properties
  * you can use to render your UI.
  *
  * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
  *
  * @example
- * const { data, loading, error } = useGetCondultaQuery({
+ * const { data, loading, error } = useGetCondultaDataQuery({
  *   variables: {
  *   },
  * });
  */
-export function useGetCondultaQuery(baseOptions?: Apollo.QueryHookOptions<GetCondultaQuery, GetCondultaQueryVariables>) {
+export function useGetCondultaDataQuery(baseOptions?: Apollo.QueryHookOptions<GetCondultaDataQuery, GetCondultaDataQueryVariables>) {
         const options = {...defaultOptions, ...baseOptions}
-        return Apollo.useQuery<GetCondultaQuery, GetCondultaQueryVariables>(GetCondultaDocument, options);
+        return Apollo.useQuery<GetCondultaDataQuery, GetCondultaDataQueryVariables>(GetCondultaDataDocument, options);
       }
-export function useGetCondultaLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetCondultaQuery, GetCondultaQueryVariables>) {
+export function useGetCondultaDataLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetCondultaDataQuery, GetCondultaDataQueryVariables>) {
           const options = {...defaultOptions, ...baseOptions}
-          return Apollo.useLazyQuery<GetCondultaQuery, GetCondultaQueryVariables>(GetCondultaDocument, options);
+          return Apollo.useLazyQuery<GetCondultaDataQuery, GetCondultaDataQueryVariables>(GetCondultaDataDocument, options);
         }
-export type GetCondultaQueryHookResult = ReturnType<typeof useGetCondultaQuery>;
-export type GetCondultaLazyQueryHookResult = ReturnType<typeof useGetCondultaLazyQuery>;
-export type GetCondultaQueryResult = Apollo.QueryResult<GetCondultaQuery, GetCondultaQueryVariables>;
+export type GetCondultaDataQueryHookResult = ReturnType<typeof useGetCondultaDataQuery>;
+export type GetCondultaDataLazyQueryHookResult = ReturnType<typeof useGetCondultaDataLazyQuery>;
+export type GetCondultaDataQueryResult = Apollo.QueryResult<GetCondultaDataQuery, GetCondultaDataQueryVariables>;
 export const GetConsultaDataDocument = gql`
     query GetConsultaData {
-  consultas {
+  consultas(orderBy: createdAt_DESC, stage: DRAFT) {
     id
     description
     dataconsulta

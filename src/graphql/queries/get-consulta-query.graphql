@@ -1,5 +1,5 @@
 query GetConsultaData {
-  consultas {
+  consultas(orderBy: createdAt_DESC, stage: DRAFT)  {
     id
     description
     dataconsulta

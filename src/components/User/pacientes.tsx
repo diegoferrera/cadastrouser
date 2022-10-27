@@ -1,33 +1,11 @@
 import { useQuery, gql } from '@apollo/client';
 import { FaTrash } from "react-icons/fa";
+import { useGetSubscribersQuery } from '../../graphql/generated';
 import { Subscriber } from '../Dashboard';
-const GET_SUBSCRIBERS_QUERY = gql`
-query {
-    subscribers(orderBy: createdAt_DESC, stage: DRAFT) {
-    id
-    name
-    email
-    telefone
-    sexo
-    datadenascimento
-  }
-}
-`
-interface GetSubscribersQueryResponse {
-    subscribers: {
-    id: string
-    slug: string
-    name: string
-    email: string
-    telefone: string
-    sexo: string
-    datadenascimento: string
-       
-    } []
-}
+
 
 export function PacientesLi (){
-    const { data } = useQuery<GetSubscribersQueryResponse>(GET_SUBSCRIBERS_QUERY)
+    const { data } = useGetSubscribersQuery()
   return(
     <>
      <div className="w-full h-full rounded border-dashed border-2 border-gray-300">
@@ -58,7 +36,6 @@ export function PacientesLi (){
                             return (
                                 <Subscriber
                                         key={subscribers.id}
-                                        slug={subscribers.slug}
                                         name={subscribers.name}
                                         telefone={subscribers.telefone}
                                         sexo={subscribers.sexo}
