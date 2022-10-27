@@ -62,7 +62,7 @@ export default function Sidebarpaciente () {
                                 <span className="text-base ml-2">Prescricão Oral</span>
                             </div>
                         </li>
-                        <Link href="/calculovet">
+                        <Link href="calculovet">
                         <li className="flex w-full justify-between text-gray-600 hover:text-green-500 cursor-pointer items-center mb-3 pb-2 pl-2 font-light border-gray-400 border-b">
                             <div className="flex items-center">
                                 
