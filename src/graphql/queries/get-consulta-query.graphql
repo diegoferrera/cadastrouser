@@ -1,0 +1,12 @@
+query GetConsultaData {
+  consultas {
+    id
+    description
+    dataconsulta
+    tipo
+    subscriber {
+      id
+      name
+    }
+  }
+}

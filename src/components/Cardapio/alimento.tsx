@@ -14,7 +14,7 @@ export function Alimentoli (){
                         </div>
                     </div>
                 </div>
-     <div className="bg-white shadow px-4 md:px-10 pt-4 md:pt-7 pb-5 overflow-y-auto">
+     <div className="bg-white shadow px-2 md:px-2 pt-4 md:pt-7 pb-5">
                     <table className="w-full whitespace-nowrap">
                         <thead>
                             <tr className="h-16 w-full text-lg leading-none text-gray-700">

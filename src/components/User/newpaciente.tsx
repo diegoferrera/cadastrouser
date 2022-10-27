@@ -3,16 +3,8 @@ import Link from 'next/link';
 import React, { useState, FormEvent } from "react";
 import { FaUserAlt } from "react-icons/fa";
 import { useRouter } from 'next/router'
+import { useCreateSubscriberMutation } from '../../graphql/generated';
 
-const CREATE_SUBSCRIBER_MUTATION = gql`
-mutation CreateSubscriber($name: String!, $email: String!, $telefone: String, $endereco: String, $convenio: String, $sexo: String, $datadenascimento: String) {
-  createSubscriber(
-    data: {name: $name, email: $email, telefone: $telefone, endereco: $endereco, convenio: $convenio, sexo: $sexo, datadenascimento: $datadenascimento}
-  ) {
-    id
-  }
-}
-`
 
 export default function Modal() {
 
@@ -27,13 +19,13 @@ export default function Modal() {
   const [isLoading, setIsLoading] = useState(false)
   const [showModal, setShowModal] = React.useState(false);
   
-  const [createSubscriber] = useMutation(CREATE_SUBSCRIBER_MUTATION)
+  const [createSubscriber] = useCreateSubscriberMutation();
 
 
   function handleSubscribe(event: FormEvent) {
     event.preventDefault();
    
-    createSubscriber({
+   createSubscriber({
       variables: {
         name,
         email,
@@ -144,7 +136,7 @@ export default function Modal() {
                      
                       <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
                       <button
-                    className="text-red-500 bg-gray-300 font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="text-red-500 bg-gray-300 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowModal(false)}
                   >
@@ -165,17 +157,7 @@ export default function Modal() {
                 
                 
                 </form>
-                <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
-                <p className="text-gray-500 pr-10">Clique em salvar e depois em confirma</p>
-                <Link href="/pacientes">
-                  <button
-                    className="bg-purple-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                    type="button"
-                    
-                  >
-                    Confirma
-                  </button></Link>
-                </div>
+                
                 </div>
                 {/*footer*/}
                 

@@ -1,0 +1,6 @@
+query GetCondulta {
+  condultas {
+    name
+    description
+  }
+}

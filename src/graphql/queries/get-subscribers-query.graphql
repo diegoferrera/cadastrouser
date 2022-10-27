@@ -1,0 +1,10 @@
+query GetSubscribers {
+    subscribers(orderBy: createdAt_DESC, stage: DRAFT) {
+    id
+    name
+    email
+    telefone
+    sexo
+    datadenascimento
+  }
+}

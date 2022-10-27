@@ -4,13 +4,16 @@ import Image from 'next/image'
 import Link from "next/link";
 
 
+
+
 export default function Sidebarpaciente () {
   const [show, setShow] = useState(true);
+
   return (
   <>
 {/* Sidebar starts */}
             {/* Remove class [ hidden ] and replace [ sm:flex ] with [ flex ] */}
-            <div className="w-64 absolute sm:relative bg-gray-300 shadow md:h-full flex-col justify-between hidden sm:flex">
+            <div className="w-64 absolute sm:relative bg-gray-300 shadow md:h-screen flex-col justify-between hidden h-screen sm:flex">
                 <div className="px-4">
                 <div className="flex mt-12 items-center relative cursor-pointer border-b border-gray-400">
                 <div>
@@ -21,7 +24,9 @@ export default function Sidebarpaciente () {
                 height={40}
                 />
                 </div>
-                <p className="text-gray-400 text-sm ml-2">Nome do paciente</p>
+                <p className="text-gray-400 text-sm ml-2">Paciente</p>
+                
+                
                 </div>
                 
                
@@ -36,12 +41,32 @@ export default function Sidebarpaciente () {
                             </div>
                             
                         </li>
+                        <Link href="/iniciar">
                         <li className="flex w-full justify-between text-gray-600 hover:text-green-500 cursor-pointer items-center mb-2 pb-2 border-gray-400 border-b">
                             <div className="flex items-center">
                                 
                                 <span className="text-lg font-medium  ml-2">Antopometria</span>
                             </div>
                             
+                        </li>
+                        </Link>
+                        <li className="flex w-full justify-between text-gray-600 hover:text-green-500 cursor-pointer items-center mb-2 pb-2 border-gray-400 border-b">
+                            <div className="flex items-center">
+                                
+                                <span className="text-lg font-medium  ml-2">Prescricão Dietica</span>
+                            </div>
+                        </li>
+                        <li className="flex w-full justify-between text-gray-600 hover:text-green-500 cursor-pointer items-center mb-2 pb-2 pl-2 font-light border-gray-400 border-b">
+                            <div className="flex items-center">
+                                
+                                <span className="text-base ml-2">Prescricão Oral</span>
+                            </div>
+                        </li>
+                        <li className="flex w-full justify-between text-gray-600 hover:text-green-500 cursor-pointer items-center mb-3 pb-2 pl-2 font-light border-gray-400 border-b">
+                            <div className="flex items-center">
+                                
+                                <span className="text-base ml-2">Cálculo de VET</span>
+                            </div>
                         </li>
                         <li className="flex w-full justify-between text-gray-600 hover:text-green-500 cursor-pointer items-center mb-2 pb-2 border-gray-400 border-b">
                             <div className="flex items-center">
@@ -65,9 +90,33 @@ export default function Sidebarpaciente () {
                         <li className="flex w-full justify-between text-gray-600 hover:text-green-500 cursor-pointer items-center mb-2 pb-2 border-gray-400 border-b">
                             <div className="flex items-center">
                                 
-                                <span className="text-lg font-medium  ml-2">Prescricão Dietica</span>
+                                <span className="text-lg font-medium  ml-2">Condultas</span>
+                            </div>
+                          
+                        </li>
+                        
+                        <li className="flex w-full justify-between text-purple-700 hover:text-green-500 cursor-pointer items-center mb-2 pb-2 border-gray-400 border-b">
+                            <div className="flex items-center">
+                                
+                                <span className="text-lg font-bold  ml-2">ONCOLOGIA</span>
                             </div>
                         </li>
+                        <li className="flex w-full justify-between text-gray-600 hover:text-green-500 cursor-pointer items-center mb-2 pb-2 pl-2 font-light border-gray-400 border-b">
+                            <div className="flex items-center">
+                                
+                                <span className="text-base ml-2">Orientações</span>
+                            </div>
+                        </li>
+                        <li className="flex w-full justify-between text-gray-600 hover:text-green-500 cursor-pointer items-center mb-2 pb-2 pl-2 font-light border-gray-400 border-b">
+                            <div className="flex items-center">
+                                
+                                <span className="text-base ml-2">Questionário</span>
+                            </div>
+                        </li>
+                       
+                       
+                        
+
                         <Link href="consulta">
                         <li className="flex w-full justify-between bg-green-300 text-gray-100 hover:text-gray-500 cursor-pointer items-center mb-2 mt-4 rounded">
                             <div className="flex items-center">

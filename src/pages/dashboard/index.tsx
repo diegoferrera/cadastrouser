@@ -6,33 +6,11 @@ import { FaHandPeace, FaUserAlt, FaCalendarAlt } from "react-icons/fa";
 import { Subscriber } from '../../components/Dashboard';
 import { Header } from "../../components/Header";
 import Modal from "../../components/User/newpaciente";
+import { useGetSubscribersQuery } from '../../graphql/generated';
 
-const GET_SUBSCRIBERS_QUERY = gql`
-query {
-    subscribers(orderBy: createdAt_DESC, stage: DRAFT) {
-    id
-    name
-    email
-    telefone
-    sexo
-    datadenascimento
-  }
-}
-`
-interface GetSubscribersQueryResponse {
-    subscribers: {
-    id: string
-    name: string
-    email: string
-    telefone: string
-    sexo: string
-    datadenascimento: string
-       
-    } []
-}
 
 export default function Dashboard () {
-    const { data } = useQuery<GetSubscribersQueryResponse>(GET_SUBSCRIBERS_QUERY)
+    const { data } = useGetSubscribersQuery()
     
   return (
     <>

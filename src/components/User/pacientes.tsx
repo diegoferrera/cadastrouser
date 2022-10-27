@@ -16,6 +16,7 @@ query {
 interface GetSubscribersQueryResponse {
     subscribers: {
     id: string
+    slug: string
     name: string
     email: string
     telefone: string
@@ -57,6 +58,7 @@ export function PacientesLi (){
                             return (
                                 <Subscriber
                                         key={subscribers.id}
+                                        slug={subscribers.slug}
                                         name={subscribers.name}
                                         telefone={subscribers.telefone}
                                         sexo={subscribers.sexo}

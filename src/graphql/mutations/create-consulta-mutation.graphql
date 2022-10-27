@@ -1,0 +1,7 @@
+mutation createConsulta($description: String, $dataconsulta: String, $slug: String, $id: ID) {
+  createConsulta(
+    data: {dataconsulta: "$dataconsulta", description: "$description", slug: "$slug", tipo: "$tipo"}
+  ) {
+    id
+  }
+}

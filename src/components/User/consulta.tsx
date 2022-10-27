@@ -73,9 +73,16 @@ export function Consultali (){
      <div className="bg-white shadow px-4 md:px-10 pt-4 md:pt-7 pb-5 overflow-y-auto">
                     <table className="w-full whitespace-nowrap">
                         <thead>
+                            <tr className="h-16 w-full text-sm leading-none text-gray-400">
+                                <th className="font-medium text-left pl-4">Cadastre uma nova consulta ou inicie uma consulta automática.</th>
+                               
+                                
+                               
+                                
+                            </tr>
                             <tr className="h-16 w-full text-lg leading-none text-gray-700">
-                                <th className="font-normal text-left pl-4">Motivo da consulta</th>
-                                <th className="font-normal text-left pl-8">Data / Hora</th>
+                                <th className="font-bold text-left pl-4">Motivo da consulta</th>
+                                <th className="font-bold text-left pl-8">Data Consulta</th>
                                 
                                
                                 
@@ -86,13 +93,13 @@ export function Consultali (){
                                 <td className="pl-4 cursor-pointer">
                                     <div className="flex items-center">
                                         <div className="pl-0">
-                                            <p className="font-medium text-base">MG</p>
+                                            <p className="font-medium text-base">Não informado</p>
                                           
                                         </div>
                                     </div>
                                 </td>
                                 <td className="pl-8">
-                                    <p className="text-base font-medium leading-none text-gray-800">03/10/22 </p>
+                                    <p className="text-base font-medium leading-none text-gray-800">27/10/22</p>
                                     
                                 </td>
                                
@@ -100,7 +107,7 @@ export function Consultali (){
                                 <td className="pl-8">
                                 <Link href="iniciar">
                                 <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-green-300 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100">Continuar Consulta</p>
+                                <p className="text-sm font-medium leading-none text-gray-100">Iniciar Consulta</p>
                             </button>
                             </Link>
                                 </td>
@@ -111,64 +118,8 @@ export function Consultali (){
                             </button>
                                 </td>
                             </tr>
-                            <tr className="h-20 text-sm leading-none text-gray-700 bg-gray-100 hover:bg-gray-200 border-b border-t border-gray-300">
-                                <td className="pl-4 cursor-pointer">
-                                    <div className="flex items-center">
-                                        <div className="pl-0">
-                                            <p className="font-medium text-base">MG</p>
-                                          
-                                        </div>
-                                    </div>
-                                </td>
-                                <td className="pl-8">
-                                    <p className="text-base font-medium leading-none text-gray-800">04/10/22 </p>
-                                    
-                                </td>
-                               
-                                
-                                <td className="pl-8">
-                                <Link href="iniciar">
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-green-300 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100">Continuar Consulta</p>
-                            </button>
-                              </Link>
-                                </td>
-                              
-                                <td className="pl-2">
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-purple-700 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100"><FaTrash/></p>
-                            </button>
-                                </td>
-                            </tr>
-                            <tr className="h-20 text-sm leading-none text-gray-700 bg-gray-100 hover:bg-gray-200 border-b border-t border-gray-300">
-                                <td className="pl-4 cursor-pointer">
-                                    <div className="flex items-center">
-                                        <div className="pl-0">
-                                            <p className="font-medium text-base">MG</p>
-                                          
-                                        </div>
-                                    </div>
-                                </td>
-                                <td className="pl-8">
-                                    <p className="text-base font-medium leading-none text-gray-800">06/10/22 </p>
-                                    
-                                </td>
-                               
-                                
-                                <td className="pl-8">
-                                <Link href="iniciar">
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-green-300 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100">Continuar Consulta</p>
-                            </button>
-                            </Link>
-                                </td>
-                              
-                                <td className="pl-2">
-                                <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-purple-700 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100"><FaTrash/></p>
-                            </button>
-                                </td>
-                            </tr>
+                            
+                            
                             
                            
                            
