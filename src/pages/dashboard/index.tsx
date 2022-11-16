@@ -37,7 +37,7 @@ export default function Dashboard () {
                        <li> - Subpáginas e Questionários e pagina inicial <span className="text-green-500">Sincronizando questionários</span></li>
                        <li> - Bioimpedância <span className="text-green-500">Finalizado</span> </li>
                        <li> - Agenda com usuário de secretaria: <span className="text-green-500">Finalizado</span></li>
-                       <li> - Perfil de paciente <span className="text-green-500">Finalizado</span></li>
+                       <li> - Divisão de Perfil do paciente <span className="text-green-500">Finalizado</span></li>
                         <li className="font-bold bg-green-500 text-gray-100 p-2"> - Usar o sistema enquanto carrega os arquivos no servidor afeta o funcionamento do seu software</li>   
 
                     </ul>
