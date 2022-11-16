@@ -39,10 +39,11 @@ export function Header () {
                                     Pacientes
                                 </li>
                                 </Link>
-                                <li className="cursor-pointer h-full flex items-center text-lg hover:text-gray-700 text-gray-800 tracking-normal transition duration-150 ease-in-out">
+                                <li className="cursor-pointer h-full flex items-center text-lg hover:text-gray-700 text-gray-800 tracking-normal transition duration-150 ease-in-out mr-10">
                                   
                                 Relatório
                                 </li>
+
                                 <li className="cursor-pointer h-full flex items-center text-lg hover:text-gray-700 text-gray-800 tracking-normal transition duration-150 ease-in-out">
                                   
                                     Suporte
