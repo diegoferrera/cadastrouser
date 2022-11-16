@@ -21,7 +21,7 @@ export default function Dashboard () {
             {/* Code block starts */}
             <div className="my-6 lg:my-12 container px-6 mx-auto flex flex-col md:flex-row items-start md:items-center justify-between pb-4">
                 <div>
-                    <h4 className="text-4xl font-bold leading-tight text-orange-500">Olá, Socorro</h4>
+                    <h4 className="text-4xl font-bold leading-tight text-orange-500">Olá, Socorro!<span className="text-green-500"> Bom dia </span></h4>
                     <ul className="flex flex-col md:flex-row items-start md:items-center text-gray-400 text-xl mt-3">
                         <li className="flex items-center mr-4">
                             <div className="mr-2">
