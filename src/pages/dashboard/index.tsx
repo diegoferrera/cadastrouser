@@ -31,7 +31,7 @@ export default function Dashboard () {
                         </li>
                        
                     </ul>
-                    <h4 className="mt-4 text-lg bg-red-500 rounded text-gray-100 font-bold leading-tight p-2">Arquivos carregos: Serapração de perfil de paciente, suplementos, alimentos.</h4>
+                    <h4 className="mt-4 text-lg bg-red-500 rounded text-gray-100 font-bold leading-tight p-2">Arquivos carregados: Serapração de perfil de paciente, suplementos, alimentos.</h4>
                     <ul className="text-gray-700">
                        <li className="font-bold">Sincronizando:</li>
                        <li> - Subpáginas e Questionários e pagina inicial <span className="text-green-500">Sincronizando questionários</span></li>
