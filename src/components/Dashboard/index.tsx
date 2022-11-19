@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+
 interface SubscriberProps{
   name: string;
   telefone: string;
@@ -9,6 +10,9 @@ interface SubscriberProps{
 }
 
 export function Subscriber(props: SubscriberProps){
+
+
+  
 
     
   return (

@@ -31,13 +31,12 @@ export default function Dashboard () {
                         </li>
                        
                     </ul>
-                    <h4 className="mt-4 text-lg bg-red-500 rounded text-gray-100 font-bold leading-tight p-2">Arquivos carregados: Serapração de perfil de paciente, suplementos, alimentos.</h4>
+                    <h4 className="mt-4 text-lg bg-red-500 rounded text-gray-100 font-bold leading-tight p-2">Um arquivo sendo carregado</h4>
                     <ul className="text-gray-700">
-                       <li className="font-bold">Sincronizando:</li>
-                       <li> - Subpáginas e Questionários e pagina inicial <span className="text-green-500">Sincronizando questionários</span></li>
-                       <li> - Bioimpedância <span className="text-green-500">Finalizado</span> </li>
-                       <li> - Agenda com usuário de secretaria: <span className="text-green-500">Finalizado</span></li>
-                       <li> - Divisão de Perfil do paciente <span className="text-green-500">Finalizado</span></li>
+                       <li className="font-bold">Sincronizando arquivo:</li>
+                       <li>Pagina inicial <span className="text-green-500">Sincronizando</span></li>
+
+      
                         <li className="font-bold bg-green-500 text-gray-100 p-2"> - Usar o sistema enquanto carrega os arquivos no servidor afeta o funcionamento do seu software</li>   
 
                     </ul>
