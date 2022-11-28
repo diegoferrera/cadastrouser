@@ -7,10 +7,11 @@ export function ButtonLogin () {
      <div>
     
      <Image
-      src="/bl_1.png"
+      src="/socorro.png"
       alt="Picture of the author"
       width={55}
       height={55}
+      
     />
      </div>
     <p className="text-gray-100 text-sm ml-2">Socorro Coêlho</p>

@@ -21,7 +21,7 @@ export default function Dashboard () {
             {/* Code block starts */}
             <div className="my-6 lg:my-12 container px-6 mx-auto flex flex-col md:flex-row items-start md:items-center justify-between pb-4">
                 <div>
-                    <h4 className="text-4xl font-bold leading-tight text-orange-500">Olá, Socorro!<span className="text-green-500"> Bom dia </span></h4>
+                    <h4 className="text-4xl font-bold leading-tight text-orange-500">Olá, Socorro</h4>
                     <ul className="flex flex-col md:flex-row items-start md:items-center text-gray-400 text-xl mt-3">
                         <li className="flex items-center mr-4">
                             <div className="mr-2">
@@ -29,17 +29,10 @@ export default function Dashboard () {
                             </div>
                             <span className="leading-tight pt-2">Confira suas consultas</span>
                         </li>
-                       
                     </ul>
-                    <h4 className="mt-4 text-lg bg-red-500 rounded text-gray-100 font-bold leading-tight p-2">Um arquivo sendo carregado</h4>
-                    <ul className="text-gray-700">
-                       <li className="font-bold">Sincronizando arquivo:</li>
-                       <li>Pagina inicial <span className="text-green-500">Sincronizando</span></li>
 
-      
-                        <li className="font-bold bg-green-500 text-gray-100 p-2"> - Usar o sistema enquanto carrega os arquivos no servidor afeta o funcionamento do seu software</li>   
-
-                    </ul>
+                    <h4 className="mt-4 text-lg bg-red-500 rounded text-gray-100 font-bold leading-tight p-2">Atualizando Pagina Princial</h4>
+                    
                 </div>
                 <div className="flex mt-6 md:mt-0">
                     <Modal/>
@@ -56,12 +49,11 @@ export default function Dashboard () {
                     <div className="sm:flex items-center justify-between">
                         <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold leading-normal text-gray-700">Pacientes</p>
                         <div>
-                        <input className=" focus:outline-none rounded w-full text-sm text-gray-500 bg-gray-200 p-10 py-2" type="text" placeholder="Faca uma pesquisar" />
-                  
-                           
+                        <input className=" focus:outline-none rounded w-full text-sm text-gray-500 bg-gray-200 p-10 py-2" type="text" placeholder="Faca uma pesquisar" />    
                         </div>
                     </div>
                 </div>
+                
                 <div className="bg-white shadow px-4 md:px-10 pt-4 md:pt-7 pb-5 overflow-y-auto">
                     <table className="w-full whitespace-nowrap">
                         <thead>
@@ -69,8 +61,6 @@ export default function Dashboard () {
                                 <th className="font-normal text-left pl-4">Nome</th>
                                 <th className="font-normal text-left pl-12">Sexo</th>
                                 <th className="font-normal text-left pl-12">Nascimento</th>
-                               
-                                
                             </tr>
                         </thead>
                         <tbody className="w-full">
