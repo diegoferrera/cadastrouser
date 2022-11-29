@@ -24,7 +24,7 @@ export default function Sidebarpaciente () {
                 height={40}
                 />
                 </div>
-                <p className="text-gray-400 text-sm ml-2">Paciente</p>
+                <p className="text-gray-400 text-sm ml-2">Paciente lista</p>
                 
                 
                 </div>
@@ -37,7 +37,7 @@ export default function Sidebarpaciente () {
                     <li className="flex w-full justify-between text-gray-500 hover:text-green-500 cursor-pointer items-center mb-2 pb-2 border-gray-400 border-b">
                             <div className="flex items-center">
                               
-                                <span className="text-lg font-medium ml-2">Avaliações Clínicas</span>
+                                <span className="text-lg font-medium ml-2">cadastro</span>
                             </div>
                             
                         </li>

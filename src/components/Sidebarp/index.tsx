@@ -12,40 +12,40 @@ export default function Sidebarp () {
                         <li className="flex w-full justify-between text-gray-500 hover:text-green-500 cursor-pointer items-center mb-6">
                             <div className="flex items-center">
                               
-                                <span className="text-lg font-medium ml-2">Autopometria</span>
+                                <span className="text-lg font-medium ml-2">Menu</span>
                             </div>
                             
                         </li>
                         <li className="flex w-full justify-between text-gray-600 hover:text-green-500 cursor-pointer items-center mb-6">
                             <div className="flex items-center">
                                 
-                                <span className="text-lg font-medium  ml-2">Av.</span>
+                                <span className="text-lg font-medium  ml-2">Menu</span>
                             </div>
                             
                         </li>
                         <li className="flex w-full justify-between text-gray-600 hover:text-green-500 cursor-pointer items-center mb-6">
                             <div className="flex items-center">
                                
-                                <span className="text-lg font-medium  ml-2">Fitoterápicos</span>
+                                <span className="text-lg font-medium  ml-2">Menu</span>
                             </div>
                         </li>
                         <li className="flex w-full justify-between text-gray-600 hover:text-green-500 cursor-pointer items-center mb-6">
                             <div className="flex items-center">
                                 
-                                <span className="text-lg font-medium  ml-2">Suplementos</span>
+                                <span className="text-lg font-medium  ml-2">Menu</span>
                             </div>
                         </li>
                         <li className="flex w-full justify-between text-gray-600 hover:text-green-500 cursor-pointer items-center mb-6">
                             <div className="flex items-center">
                                 
-                                <span className="text-lg font-medium  ml-2">Receitas</span>
+                                <span className="text-lg font-medium  ml-2">Menu</span>
                             </div>
                           
                         </li>
                         <li className="flex w-full justify-between text-gray-600 hover:text-green-500 cursor-pointer items-center mb-6">
                             <div className="flex items-center">
                                 
-                                <span className="text-lg font-medium  ml-2">Medidas</span>
+                                <span className="text-lg font-medium  ml-2">Menu</span>
                             </div>
                         </li>
                        
@@ -185,7 +185,7 @@ export default function Sidebarp () {
                                     <line x1={21} y1={21} x2={15} y2={15} />
                                 </svg>
                             </div>
-                            <input className=" bg-gray-700 focus:outline-none rounded w-full text-sm text-gray-500 bg-gray-100 pl-10 py-2" type="text" placeholder="Search" />
+                            <input className=" bg-gray-700 focus:outline-none rounded w-full text-sm text-gray-500  pl-10 py-2" type="text" placeholder="Search" />
                         </div>
                     </div>
                 </div>

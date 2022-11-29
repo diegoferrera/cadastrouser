@@ -28,7 +28,7 @@ export function Header () {
                                     <span className="mr-2">
                                    
                                     </span>
-                                   Agenda
+                                   teste
                                 </li>
                                 </Link>
                                 <Link href="/pacientes" passHref>
@@ -36,7 +36,7 @@ export function Header () {
                                     <span className="mr-2">
                                     
                                     </span>
-                                    Pacientes
+                                    usuario
                                 </li>
                                 </Link>
                                 <li className="cursor-pointer h-full flex items-center text-lg hover:text-gray-700 text-gray-800 tracking-normal transition duration-150 ease-in-out mr-10">
@@ -46,7 +46,7 @@ export function Header () {
 
                                 <li className="cursor-pointer h-full flex items-center text-lg hover:text-gray-700 text-gray-800 tracking-normal transition duration-150 ease-in-out">
                                   
-                                    Suporte
+                                   teste
                                 </li>
                                
                             </ul>
@@ -67,11 +67,11 @@ export function Header () {
                                             </li>
                                             <li className="cursor-pointer text-gray-200 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex items-center">
                                               
-                                                <span className="ml-2">Forum</span>
+                                                <span className="ml-2"></span>
                                             </li>
                                             <li className="cursor-pointer text-gray-200 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
                                              
-                                                <span className="ml-2">Suporte</span>
+                                                <span className="ml-2"></span>
                                             </li>
                                             <li className="cursor-pointer text-gray-200 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
                                              
@@ -95,7 +95,7 @@ export function Header () {
                                     <div className="flex items-center">
                                        
                                     <Link href="/agenda" passHref>
-                                        <span className="ml-2 font-bold">Agenda</span>
+                                        <span className="ml-2 font-bold">lista</span>
                                         </Link>
                                     </div>
                                 </li>
@@ -114,7 +114,7 @@ export function Header () {
                                         <div className="w-12 cursor-pointer flex text-sm border-2 border-transparent rounded focus:outline-none focus:border-white transition duration-150 ease-in-out">
                                             
                                         </div>
-                                        <p className="text-sm ml-2 cursor-pointer">Socorro Coêlho</p>
+                                        <p className="text-sm ml-2 cursor-pointer">nome de usuario</p>
                                         <div className="sm:ml-2 text-gray-800 relative">
                                           
                                         </div>

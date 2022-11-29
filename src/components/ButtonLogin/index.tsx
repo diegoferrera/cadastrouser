@@ -7,7 +7,7 @@ export function ButtonLogin () {
      <div>
     
      <Image
-      src="/socorro.png"
+      src="/bl_1.png"
       alt="Picture of the author"
       width={55}
       height={55}

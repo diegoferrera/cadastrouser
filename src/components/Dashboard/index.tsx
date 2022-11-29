@@ -12,7 +12,9 @@ interface SubscriberProps{
 }
 
 export function Subscriber(props: SubscriberProps){
+
 const [deleteUser] = useDeleteSubscriberMutation()
+
 
 
 
@@ -47,7 +49,7 @@ const [deleteUser] = useDeleteSubscriberMutation()
                                 <td className="pl-12">
                                 <Link href="#" passHref>
                                 <button className="inline-flex sm:ml-3 mt-4 sm:mt-0 items-start justify-start px-6 py-3 bg-green-300 hover:bg-indigo-600 focus:outline-none rounded">
-                                <p className="text-sm font-medium leading-none text-gray-100">Iniciar Consulta</p>
+                                <p className="text-sm font-medium leading-none text-gray-100">Cadastrar</p>
                                 </button>
                                 </Link>
                                 </td>
